@@ -448,10 +448,11 @@ MonoBehaviour:
   AttackHitboxHorizontal: {fileID: 5141062210751372251}
   AttackHitboxVertical: {fileID: 2782608290133232526}
   moveSpeed: 10
-  chargeSpeed: 1000
+  chargeSpeed: 20
   playerHealth: 3
   isAttacking: 0
   isChargeAttacking: 0
+  chargeWait: 2
 --- !u!114 &1149189552979807547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,4 +470,3 @@ MonoBehaviour:
   Attack: 0
   ChargeAttack: 0
   ChargeAttackRelease: 0
-  Jump: 0
