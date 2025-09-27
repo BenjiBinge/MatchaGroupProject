@@ -31,10 +31,9 @@ public class FollowEnemy : MonoBehaviour
   private void
     OnTriggerEnter2D(Collider2D other)
   {
-    if (other.gameObject.CompareTag("AttackHitbox"))
+    if (other.CompareTag("AttackHitbox"))
     {
       Destroy(gameObject);
-      Destroy(other.gameObject);
     }
   }
   private void FixedUpdate()
