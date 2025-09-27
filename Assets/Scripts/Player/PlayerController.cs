@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+   //Various important components
    private InputManager _input;
    private Rigidbody2D _rigidbody;
    public GameObject AttackHitboxHorizontal;
@@ -21,7 +22,9 @@ public class PlayerController : MonoBehaviour
    private float _attackCooldown = 5f;
    private bool _canAttack = true;
 
-
+   
+   
+   
    private void Start()
    {
       _input = GetComponent<InputManager>();
@@ -31,6 +34,7 @@ public class PlayerController : MonoBehaviour
 
    private void FixedUpdate()
    {
+      //Vertical + Horizontal movement
       _rigidbody.linearVelocityX = _input.Horizontal * moveSpeed;
       _rigidbody.linearVelocityY = _input.Vertical * moveSpeed;
    }
@@ -53,13 +57,15 @@ public class PlayerController : MonoBehaviour
       
       Attack();
 
-
+      
+      //Dies if Hp <= 0
       if (playerHealth <= 0)
       {
          RestartScene();
       }
    }
 
+   
    //Restarts the current scene
    private void RestartScene()
    {
