@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,20 +16,26 @@ public class PlayerController : MonoBehaviour
    //Speed
    public float moveSpeed;
    public float chargeSpeed;
-
+   public float moveDirection;
+   
+   //Health and Damage related variables
    public float playerHealth;
+   public float damageCooldown;
+   private float _damageCooldownTimer;
+   public bool isKnockbacked;
    
    //Attack related variables
    public bool isAttacking;
    public bool isChargeAttacking;
-   private float _attackCooldown = 5f;
    private bool _canAttack = true;
 
    //Charge attack timer variables
    public float chargeWait = 2f;
    private float _chargeTimer = 2f;
 
-   public float moveDirection;
+   
+   
+   
    
    
    private void Start()
@@ -41,7 +48,7 @@ public class PlayerController : MonoBehaviour
    private void FixedUpdate()
    {
       //Vertical + Horizontal movement
-      if (!isChargeAttacking)
+      if (!isChargeAttacking && !isKnockbacked)
       {
          _rigidbody.linearVelocityX = _input.Horizontal * moveSpeed;
          _rigidbody.linearVelocityY = _input.Vertical * moveSpeed;
@@ -79,12 +86,6 @@ public class PlayerController : MonoBehaviour
          _input.Vertical = 0;
       }
       
-      
-      //Dies if Hp <= 0
-      if (playerHealth <= 0)
-      {
-         RestartScene();
-      }
       
       Attack();
       
@@ -140,12 +141,14 @@ public class PlayerController : MonoBehaviour
 
       if (moveDirection == -1 || moveDirection == -3)
       {
+         
          _canAttack = false;
          AttackHitboxVertical.SetActive(true);
          yield return new WaitForSeconds(0.5f);
          AttackHitboxVertical.SetActive(false);
          _canAttack = true;
       }
+      
    }
    
    
@@ -181,6 +184,54 @@ public class PlayerController : MonoBehaviour
       isAttacking = false;
       _chargeTimer = chargeWait;
    }
+
+   //Collision
+   private void OnCollisionEnter2D(Collision2D other)
+   {
+      //When player collides with anything with the "Enemy" tag
+      if (other.gameObject.CompareTag("Enemy"))
+      {
+         StartCoroutine(TakeDamage());
+      }
+   }
    
+   
+   //For taking damage
+   private IEnumerator TakeDamage()
+   {
+      //You take damage + knockback
+      if (Time.time > _damageCooldownTimer && moveDirection == 1 || moveDirection == 3)
+      {
+         isKnockbacked = true;
+         playerHealth -= 1;
+         _damageCooldownTimer = Time.time + damageCooldown;
+         _rigidbody.linearVelocityX -= moveSpeed * 2f;
+         
+         yield return new WaitForSeconds(0.5f);
+         isKnockbacked = false;
+         //Player dies
+         if (playerHealth <= 0)
+         {
+            RestartScene();
+         }
+      }
+      if (Time.time > _damageCooldownTimer && moveDirection == -1 || moveDirection == -3)
+      {
+         isKnockbacked = true;
+         playerHealth -= 1;
+         _damageCooldownTimer = Time.time + damageCooldown;
+         _rigidbody.linearVelocityY -= moveSpeed * 2f;
+         
+         yield return new WaitForSeconds(0.5f);
+         isKnockbacked = false;
+         //Player dies
+         if (playerHealth <= 0)
+         {
+            RestartScene();
+         }
+      }
+      
+      
+   }
    
 }

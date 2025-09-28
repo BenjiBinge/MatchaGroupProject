@@ -449,7 +449,9 @@ MonoBehaviour:
   AttackHitboxVertical: {fileID: 2782608290133232526}
   moveSpeed: 10
   chargeSpeed: 20
+  moveDirection: 0
   playerHealth: 3
+  damageCooldown: 1
   isAttacking: 0
   isChargeAttacking: 0
   chargeWait: 2
