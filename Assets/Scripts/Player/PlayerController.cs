@@ -34,10 +34,6 @@ public class PlayerController : MonoBehaviour
    private float _chargeTimer = 2f;
 
    
-   
-   
-   
-   
    private void Start()
    {
       _input = GetComponent<InputManager>();
@@ -235,8 +231,14 @@ public class PlayerController : MonoBehaviour
             DeathScreen();
          }
       }
-      
-      
+   }
+
+   private void OnTriggerEnter2D(Collider2D other)
+   {
+      if (other.gameObject.CompareTag("Door"))
+      {
+         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+      }
    }
    
 }

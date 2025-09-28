@@ -6,6 +6,7 @@ TagManager:
   tags:
   - AttackHitbox
   - Enemy
+  - Door
   layers:
   - Default
   - TransparentFX
