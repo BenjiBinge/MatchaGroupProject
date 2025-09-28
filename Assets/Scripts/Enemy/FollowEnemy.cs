@@ -26,6 +26,7 @@ public class FollowEnemy : MonoBehaviour
 
     Vector3 direction = (target.position - transform.position).normalized;
     _moveDirection = direction;
+    
   }
 
   private void

@@ -115,6 +115,11 @@ public class PlayerController : MonoBehaviour
    {
       SceneManager.LoadScene(SceneManager.GetActiveScene().name);
    }
+
+   private void DeathScreen()
+   {
+      SceneManager.LoadScene("DeathScreen");
+   }
    
    
    //Attack function
@@ -207,12 +212,12 @@ public class PlayerController : MonoBehaviour
          _damageCooldownTimer = Time.time + damageCooldown;
          _rigidbody.linearVelocityX -= moveSpeed * 2f;
          
-         yield return new WaitForSeconds(0.5f);
+         yield return new WaitForSeconds(0.2f);
          isKnockbacked = false;
          //Player dies
          if (playerHealth <= 0)
          {
-            RestartScene();
+            DeathScreen();
          }
       }
       if (Time.time > _damageCooldownTimer && moveDirection == -1 || moveDirection == -3)
@@ -222,12 +227,12 @@ public class PlayerController : MonoBehaviour
          _damageCooldownTimer = Time.time + damageCooldown;
          _rigidbody.linearVelocityY -= moveSpeed * 2f;
          
-         yield return new WaitForSeconds(0.5f);
+         yield return new WaitForSeconds(0.2f);
          isKnockbacked = false;
          //Player dies
          if (playerHealth <= 0)
          {
-            RestartScene();
+            DeathScreen();
          }
       }
       
