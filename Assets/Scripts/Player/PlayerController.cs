@@ -80,7 +80,6 @@ public class PlayerController : MonoBehaviour
       }
       
       
-      
       //Dies if Hp <= 0
       if (playerHealth <= 0)
       {
@@ -130,7 +129,7 @@ public class PlayerController : MonoBehaviour
    //For basic attack
    private IEnumerator Attacking()
    {
-      if (_input.Horizontal != 0)
+      if (moveDirection == 1 || moveDirection == 3)
       {
          _canAttack = false;
          AttackHitboxHorizontal.SetActive(true);
@@ -139,7 +138,7 @@ public class PlayerController : MonoBehaviour
          _canAttack = true;
       }
 
-      if (_input.Vertical != 0)
+      if (moveDirection == -1 || moveDirection == -3)
       {
          _canAttack = false;
          AttackHitboxVertical.SetActive(true);
