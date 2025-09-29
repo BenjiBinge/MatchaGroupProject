@@ -18,17 +18,7 @@ public class FollowEnemy : MonoBehaviour
     target = GameObject.Find("Player").transform;
   }
   
-  
-  private void Update()
-  {
-    Vector3 pdirection = Vector3.Cross(transform.position - target.position, Vector3.forward);
-    transform.rotation = Quaternion.LookRotation(Vector3.forward, pdirection);
-
-    Vector3 direction = (target.position - transform.position).normalized;
-    _moveDirection = direction;
-    
   }
-
   private void
     OnTriggerEnter2D(Collider2D other)
   {

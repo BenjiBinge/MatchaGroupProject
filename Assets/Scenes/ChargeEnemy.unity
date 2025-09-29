@@ -293,10 +293,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b475cef8b28694bb503b2f6ca53fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChargeEnemy
-  moveSpeed: 2
+  moveSpeed: 1
   target: {fileID: 109831410}
-  sightRange: 4
-  chaseRange: 3
+  sightRange: 1
+  chaseRange: 1
   canChase: 0
 --- !u!212 &834722097
 SpriteRenderer:
