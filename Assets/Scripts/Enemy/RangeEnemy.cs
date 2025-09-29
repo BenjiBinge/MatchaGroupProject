@@ -27,14 +27,16 @@ public class RangeEnemy : MonoBehaviour
     public float bulletSpeed;
 
     private float _shootCooldown = 0f;
+    private float _damageCooldownTimer = 1f;
     public bool bulletExist;
 
-    
+    private PlayerController _player;
     [SerializeField] private LayerMask whatIsPlayer;
 
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        _player = FindFirstObjectByType<PlayerController>();
         canShoot = false;
     }
     
@@ -132,7 +134,7 @@ public class RangeEnemy : MonoBehaviour
 
         if (other.gameObject.CompareTag("AttackHitbox"))
         {
-            enemyHealth--;
+            StartCoroutine(TakeDamage());
         }
     }
     
@@ -144,6 +146,19 @@ public class RangeEnemy : MonoBehaviour
             canShoot = false;
             _shootCooldown = 2f;
         }
+    }
+
+    //Takes damage
+    private IEnumerator TakeDamage()
+    {
+        if (Time.time > _damageCooldownTimer)
+        {
+            enemyHealth--;
+            _damageCooldownTimer = Time.time + 1f;
+            
+            yield return new WaitForSeconds(1f);
+        }
+        
     }
 
     
