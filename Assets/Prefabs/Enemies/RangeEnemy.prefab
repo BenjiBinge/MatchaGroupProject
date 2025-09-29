@@ -202,17 +202,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e03f9b767d1875f43a8d2937840b2b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RangeEnemy
+  enemyHealth: 2
   moveSpeed: 1
   direction: {x: 0, y: 0}
   target: {fileID: 0}
   bullet: {fileID: 8459115885753885934, guid: 25a61a6bad5ac33499f7483691c1a7ba, type: 3}
   bulletSpawn: {fileID: 1623020514293439966}
   lineOfSight: {fileID: 3164641693604904390}
+  RotationPoint: {fileID: 0}
   canChase: 0
   canShoot: 1
   shootRange: 5
-  chaseRange: 0
+  chaseRange: 8
   bulletSpeed: 3
+  bulletExist: 0
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 0
