@@ -238,7 +238,7 @@ public class PlayerController : MonoBehaviour
    private void OnTriggerEnter2D(Collider2D other)
    {
       //When player interacts with heal item
-      if (other.gameObject.CompareTag("Heal"))
+      if (other.gameObject.CompareTag("Heal") && playerHealth < 3)
       {
          playerHealth++;
          Destroy(other.gameObject);
