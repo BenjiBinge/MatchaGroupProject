@@ -19,16 +19,19 @@ public class RangeEnemy : MonoBehaviour
     public GameObject lineOfSight;
     public Transform RotationPoint;
     
-    //Chase and shoot range variables
+    //Chase and shoot bools and floats
     public bool canChase;
     public bool canShoot;
     public float shootRange;
     public float chaseRange;
     public float bulletSpeed;
 
+    //Shooting and damage related
     private float _shootCooldown = 0f;
     private float _damageCooldownTimer = 1f;
     public bool bulletExist;
+    public bool isDamaged;
+    public ParticleSystem BloodFX;
 
     private PlayerController _player;
     [SerializeField] private LayerMask whatIsPlayer;
@@ -38,13 +41,14 @@ public class RangeEnemy : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _player = FindFirstObjectByType<PlayerController>();
         canShoot = false;
+        isDamaged = false;
     }
     
     
     private void Update()
     {
         //Chases the player if the bool is true
-        if (canChase)
+        if (canChase && !isDamaged)
         {
             SetDirectionDistance();
         }
@@ -59,6 +63,7 @@ public class RangeEnemy : MonoBehaviour
         _X = new Vector2(Mathf.Sign(direction.x) * moveSpeed, 0);
         _Y = new Vector2(0, Mathf.Sign(direction.y) * moveSpeed);
 
+        
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
         {
             SetDirection(_X);
@@ -89,11 +94,7 @@ public class RangeEnemy : MonoBehaviour
             _rigidbody.linearVelocityY = 0;
         }
 
-        //Destroys enemy on death
-        if (enemyHealth <= 0)
-        {
-            Destroy(gameObject);
-        }
+        
     }
 
     //Sets direction for lineOfSight and bulletSpawn
@@ -153,10 +154,19 @@ public class RangeEnemy : MonoBehaviour
     {
         if (Time.time > _damageCooldownTimer)
         {
+            isDamaged = true;
             enemyHealth--;
             _damageCooldownTimer = Time.time + 1f;
+            BloodFX.Play();
             
             yield return new WaitForSeconds(1f);
+            isDamaged = false;
+            
+            //Destroys enemy on death
+            if (enemyHealth <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
         
     }
