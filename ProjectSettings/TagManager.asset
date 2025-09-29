@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - AttackHitbox
+  - Enemy
+  - Door
+  - Lever
+  - Heal
   layers:
   - Default
   - TransparentFX

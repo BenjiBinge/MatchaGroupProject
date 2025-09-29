@@ -9,13 +9,17 @@ public class InputManager : MonoBehaviour
 
     public bool Attack;
     public bool ChargeAttack;
+    public bool ChargeAttackRelease;
 
     private void Update()
     {
         Horizontal = _inputSystem.Player.Move.ReadValue<Vector2>().x;
         Vertical = _inputSystem.Player.Move.ReadValue<Vector2>().y;
+        
         Attack = _inputSystem.Player.Attack.WasPressedThisFrame();
         ChargeAttack = _inputSystem.Player.Attack.IsPressed();
+        ChargeAttackRelease = _inputSystem.Player.Attack.WasReleasedThisFrame();
+        
     }
     
     private void Awake() { _inputSystem = new InputSystem_Actions(); }

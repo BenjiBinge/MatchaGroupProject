@@ -79,7 +79,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -216,7 +216,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 1149189552979807547}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -358,7 +358,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -448,10 +448,14 @@ MonoBehaviour:
   AttackHitboxHorizontal: {fileID: 5141062210751372251}
   AttackHitboxVertical: {fileID: 2782608290133232526}
   moveSpeed: 10
-  chargeSpeed: 1000
+  chargeSpeed: 20
+  moveDirection: 0
   playerHealth: 3
+  damageCooldown: 1
+  isKnockbacked: 0
   isAttacking: 0
   isChargeAttacking: 0
+  chargeWait: 1
 --- !u!114 &1149189552979807547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,4 +473,3 @@ MonoBehaviour:
   Attack: 0
   ChargeAttack: 0
   ChargeAttackRelease: 0
-  Jump: 0
