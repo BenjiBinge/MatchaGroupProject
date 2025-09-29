@@ -7,6 +7,8 @@ TagManager:
   - AttackHitbox
   - Enemy
   - Door
+  - Lever
+  - Heal
   layers:
   - Default
   - TransparentFX

@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
    public GameObject AttackHitboxHorizontal;
    public GameObject AttackHitboxVertical;
    
+   private LeverManager _leverManager;
+   
    //Speed
    public float moveSpeed;
    public float chargeSpeed;
@@ -235,9 +237,11 @@ public class PlayerController : MonoBehaviour
 
    private void OnTriggerEnter2D(Collider2D other)
    {
-      if (other.gameObject.CompareTag("Door"))
+      //When player interacts with heal item
+      if (other.gameObject.CompareTag("Heal"))
       {
-         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+         playerHealth++;
+         Destroy(other.gameObject);
       }
    }
    
