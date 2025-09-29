@@ -1,13 +1,16 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class FollowEnemy : MonoBehaviour
 {
   public float moveSpeed;
-
-  public Transform target;
-  
-  private Vector2 _moveDirection;
+  public Vector2 direction;
   private Rigidbody2D _rigidbody2D;
+  
+  public Transform target;
+  private Vector2 _X, _Y;
+
+  [SerializeField] private LayerMask whatIsPlayer;
 
   private void Awake()
   {
@@ -17,17 +20,21 @@ public class FollowEnemy : MonoBehaviour
   {
     target = GameObject.Find("Player").transform;
   }
-  
-  
   private void Update()
   {
-    Vector3 pdirection = Vector3.Cross(transform.position - target.position, Vector3.forward);
-    transform.rotation = Quaternion.LookRotation(Vector3.forward, pdirection);
+    SetDirectionDistance();
+    _X = new Vector2(Mathf.Sign(direction.x) * moveSpeed, 0);
+    _Y = new Vector2(0, Mathf.Sign(direction.y) * moveSpeed);
 
-    Vector3 direction = (target.position - transform.position).normalized;
-    _moveDirection = direction;
+    if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+    {
+      _rigidbody2D.linearVelocity = _X;
+    }
+    else
+    {
+      _rigidbody2D.linearVelocity = _Y;
+    }
   }
-
   private void
     OnTriggerEnter2D(Collider2D other)
   {
@@ -36,11 +43,9 @@ public class FollowEnemy : MonoBehaviour
       Destroy(gameObject);
     }
   }
-  private void FixedUpdate()
+  private void SetDirectionDistance()
   {
-    if (target)
-    {
-      _rigidbody2D.linearVelocity = new Vector2(_moveDirection.x, _moveDirection.y) * moveSpeed;
-    }
+    direction =  (Vector2)target.transform.position - (Vector2)transform.position;
+    direction = new Vector2(Mathf.Round(direction.x), Mathf.Round(direction.y));
   }
 }
