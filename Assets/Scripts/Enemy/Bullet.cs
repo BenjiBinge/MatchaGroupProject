@@ -10,11 +10,9 @@ public class Bullet : MonoBehaviour
    {
       _rigidbody = GetComponent<Rigidbody2D>();
       
+      //Destroys the bullet after a said amount of time
       Destroy(gameObject, _despawnTimer);
    }
 
-   private void Update()
-   {
-     
-   }
+  
 }

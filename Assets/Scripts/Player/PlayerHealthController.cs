@@ -7,6 +7,14 @@ public class PlayerHealthController : MonoBehaviour
     public PlayerController target;
     public Image[] hearts;
     
+    
+    public SpriteRenderer heartSprite1;
+    public SpriteRenderer heartSprite2;
+    public SpriteRenderer heartSprite3;
+    public Sprite empty;
+    public Sprite full;
+    
+    
     private void Update()
     {
         //Checks if the playerHealth is the same as the indexNumber
@@ -14,11 +22,11 @@ public class PlayerHealthController : MonoBehaviour
         {
             if (i < target.playerHealth)
             {
-                hearts[i].color = new Color(1, 0, 0, 1);
+                hearts[i].sprite = full;
             }
             else
             {
-                hearts[i].color = new Color(1, 0, 0,0.5f);
+                hearts[i].sprite = empty;
             }
         }
     }
