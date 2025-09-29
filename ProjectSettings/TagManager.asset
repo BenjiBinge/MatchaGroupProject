@@ -9,6 +9,7 @@ TagManager:
   - Door
   - Lever
   - Heal
+  - Bullet
   layers:
   - Default
   - TransparentFX
