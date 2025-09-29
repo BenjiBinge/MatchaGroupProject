@@ -208,7 +208,7 @@ public class PlayerController : MonoBehaviour
          isKnockbacked = true;
          playerHealth -= 1;
          _damageCooldownTimer = Time.time + damageCooldown;
-         _rigidbody.linearVelocityX -= moveSpeed * 2f;
+         _rigidbody.linearVelocityX -= (moveDirection - 2f) + moveSpeed * 2f;
          
          yield return new WaitForSeconds(0.2f);
          isKnockbacked = false;
@@ -223,7 +223,7 @@ public class PlayerController : MonoBehaviour
          isKnockbacked = true;
          playerHealth -= 1;
          _damageCooldownTimer = Time.time + damageCooldown;
-         _rigidbody.linearVelocityY -= moveSpeed * 2f;
+         _rigidbody.linearVelocityY -= (moveDirection + 2f) + moveSpeed * 2f;
          
          yield return new WaitForSeconds(0.2f);
          isKnockbacked = false;
