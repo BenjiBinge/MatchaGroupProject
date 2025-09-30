@@ -9,14 +9,18 @@ public class BossBattle : MonoBehaviour
     //Arrays for spawners and enemy types
     public GameObject[] spawners;
     public GameObject[] enemies;
+    public GameObject[] bulletSpawners;
     private BossHeart _bossHeart;
+    public GameObject bullet;
     public List<GameObject> enemiesList;
-    
+
+    public bool bulletExist;
     
     //Timers
     public float spawnCooldown;
     public float vulnerableCooldown;
     public float vulnerableTime;
+    public float bulletCooldown;
 
     //Fleshwall and heart
     public GameObject fleshWall;
@@ -32,6 +36,7 @@ public class BossBattle : MonoBehaviour
     //Max and current amount of enemies
     public float activeEnemies;
     public float maxEnemies;
+    
 
 
 
@@ -40,12 +45,13 @@ public class BossBattle : MonoBehaviour
         _animator = GetComponent<Animator>();
         _bossHeart = GetComponentInChildren<BossHeart>();
         //Phase1Active = true;
+        Phase2Active = true;
     }
 
     private void Update()
     {
         //Checks if the boss' health is more or less than its halfway point
-        if (_bossHeart.currentBossHealth > (_bossHeart.maxBossHealth / 2))
+        /*if (_bossHeart.currentBossHealth > (_bossHeart.maxBossHealth / 2))
         {
             Phase1Active = true;
             Phase2Active = false;
@@ -54,7 +60,7 @@ public class BossBattle : MonoBehaviour
         {
             Phase2Active = true;
             Phase1Active = false;
-        }
+        }*/
         
         //Activates either phase 1 or 2
         if (Phase1Active)
@@ -94,12 +100,21 @@ public class BossBattle : MonoBehaviour
         
     }
 
+    //Phase 2
     private void Phase2()
     {
         deathWall1.SetActive(true);
         deathWall2.SetActive(true);
+
+        if (Time.time > bulletCooldown)
+        {
+            StartCoroutine(Shoot());
+        }
         
-        
+        if (Time.time > vulnerableCooldown)
+        {
+            StartCoroutine(Vulnerable());
+        }
     }
     
 
@@ -109,15 +124,27 @@ public class BossBattle : MonoBehaviour
         fleshWall.SetActive(false);
         
         
-        
         yield return new WaitForSeconds(vulnerableTime);
         fleshWall.SetActive(true);
         vulnerableCooldown = Time.time + vulnerableTime;
     }
-    
-    
 
 
+    private IEnumerator Shoot()
+    {
+        bulletExist = true;
+        bulletCooldown = Time.time + bulletCooldown;
+        int randomBulletSpawner = Random.Range(0, bulletSpawners.Length);
+
+        var clone = Instantiate(bullet, bulletSpawners[randomBulletSpawner].transform.position, Quaternion.identity);
+        
+        clone.TryGetComponent(out Rigidbody2D _rigidbody2D);
+        _rigidbody2D.linearVelocityY -= 3f;
+        
+        yield return new WaitForSeconds(2f);
+        bulletExist = false;
+        
+    }
 
 
 }
