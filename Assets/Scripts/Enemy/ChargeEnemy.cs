@@ -7,8 +7,10 @@ public class ChargeEnemy : MonoBehaviour
 {
 
     public float enemyHealth;
+    public GameObject LineOfSight;
+    private Collider2D[] _colliders;
     
-    //movement
+    //Movement
     public float moveSpeed;
     public Vector2 direction;
     private Rigidbody2D _rigidbody;
@@ -16,22 +18,21 @@ public class ChargeEnemy : MonoBehaviour
     private Vector2 _X, _Y;
     public Transform RotationPoint;
     
-    //dash
-    [SerializeField] private float dashDuration;
+    //Dash
+    //[SerializeField] private float dashDuration;
     [SerializeField] private float dashSpeed;
-
-    private bool isDashing;
-    public float dashRange;
+    public bool isDashing;
+    //public float dashRange;
     public bool canDash;
-    [SerializeField] private float dashCooldown;
+    //[SerializeField] private float dashCooldown;
     
-    //damage
+    //Damage
     private float _damageCooldownTimer = 1f;
     public bool isDamaged;
     public ParticleSystem BloodFX;
     
     
-    //chase
+    //Chase
     public bool canChase;
     public float chaseRange;
     
@@ -43,8 +44,10 @@ public class ChargeEnemy : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _player = FindFirstObjectByType<PlayerController>();
         isDamaged = false;
+        isDashing = false;
         
         target = GameObject.Find("Player").transform;
+        _colliders = gameObject.GetComponents<Collider2D>();
     }
 
     private void Update()
@@ -75,16 +78,23 @@ public class ChargeEnemy : MonoBehaviour
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
         {
             SetDirection(_X);
-
+            if (canDash && !isDashing)
+            {
+                StartCoroutine(Dash(_X));
+            }
         }
 
         if (Mathf.Abs(direction.x) < Mathf.Abs(direction.y))
         {
             SetDirection(_Y);
+            if (canDash && !isDashing)
+            {
+                StartCoroutine(Dash(_Y));
+            }
 
         }
 
-        if (canDash = true)
+        /*if (canDash)
         {
             Vector3 direction = (target.position - transform.position).normalized;
             direction = direction;
@@ -92,7 +102,7 @@ public class ChargeEnemy : MonoBehaviour
             canDash = false;
             StartCoroutine(Dash());
             
-        }
+        }*/
         
 
     }
@@ -112,14 +122,34 @@ public class ChargeEnemy : MonoBehaviour
      }
 
 
+     //When player is inside line of sight
      private void OnTriggerEnter2D(Collider2D other)
      {
-         if (other.gameObject.CompareTag("AttackHitbox"))
+         if (other.gameObject.CompareTag("Player"))
          {
-             StartCoroutine(TakeDamage());
+             canDash = true;
+         }
+
+         if (_colliders[0].IsTouching(other.gameObject.GetComponent<Collider2D>()))
+         {
+             if (other.gameObject.CompareTag("AttackHitbox"))
+             {
+                 StartCoroutine(TakeDamage());
+             }
          }
      }
-
+     
+     //When player exits line of sight
+     private void OnTriggerExit2D(Collider2D other)
+     {
+         if (other.gameObject.CompareTag("Player"))
+         {
+             canDash = false;
+             StartCoroutine(Dash(_X));
+         }
+     }
+    
+     //Deals damage to the enemy
      private IEnumerator TakeDamage()
      {
          if (Time.time > _damageCooldownTimer)
@@ -140,26 +170,29 @@ public class ChargeEnemy : MonoBehaviour
          }
      }
 
-     private IEnumerator Dash()
+     private IEnumerator Dash(Vector2 direction)
      {
          isDashing = true;
-         yield return new WaitForSeconds(dashCooldown);
          _rigidbody.linearVelocity = direction * dashSpeed;
-         yield return new WaitForSeconds(dashDuration);
+         
+         yield return new WaitForSeconds(1f);
+         isDashing = false;
+         
+         yield return new WaitForSeconds(2f);
+         
+         /*yield return new WaitForSeconds(2f);
+         
+         
          _rigidbody.linearVelocity = Vector2.zero;
          yield return new WaitForSeconds(dashCooldown);
-         isDashing = false;
-
-         if (dashCooldown >= 0)
-         {
-             isDashing = false;
-         }
+         isDashing = false;*/
+         
      }
      
 
-     private void onDrawGizmos()
+     private void OnDrawGizmos()
      {
-         Gizmos.color = Color.red;
-         Gizmos.DrawWireSphere(transform.position, dashRange);
+         Gizmos.color = Color.yellow;
+         Gizmos.DrawWireSphere(transform.position, chaseRange);
      }
 }

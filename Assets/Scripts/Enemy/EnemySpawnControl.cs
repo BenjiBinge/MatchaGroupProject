@@ -10,12 +10,17 @@ public class EnemySpawnControl : MonoBehaviour
     private float spawnRadius = 10f;
     private Transform _target;
 
-
+    private void Start()
+    {
+        _target = GameObject.Find("Player").transform;
+    }
+    
+    
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.aquamarine;
         Gizmos.DrawWireSphere(transform.position, spawnRadius);
-        _target = GameObject.Find("Player").transform;
+        
     }
     
     private void Update()

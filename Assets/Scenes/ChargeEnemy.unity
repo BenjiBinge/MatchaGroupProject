@@ -411,6 +411,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4693519299703514425, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 109831410}
     - target: {fileID: 5009952159107444103, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
       propertyPath: m_Name
       value: Charge enemy

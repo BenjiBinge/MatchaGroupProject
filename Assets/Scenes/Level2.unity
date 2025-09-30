@@ -21782,7 +21782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1474570126024243159, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.832585
+      value: 3.14
       objectReference: {fileID: 0}
     - target: {fileID: 1474570126024243159, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21815,42 +21815,6 @@ PrefabInstance:
     - target: {fileID: 1474570126024243159, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4693519299703514425, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
-      propertyPath: canDash
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4693519299703514425, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
-      propertyPath: canChase
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4693519299703514425, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
-      propertyPath: dashRange
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4693519299703514425, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
-      propertyPath: dashSpeed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4693519299703514425, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
-      propertyPath: isDamaged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4693519299703514425, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
-      propertyPath: moveSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4693519299703514425, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
-      propertyPath: chaseRange
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4693519299703514425, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
-      propertyPath: dashCooldown
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4693519299703514425, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
-      propertyPath: dashDuration
-      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5009952159107444103, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
       propertyPath: m_Name

@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
    private void FixedUpdate()
    {
       //Vertical + Horizontal movement
-      if (!isChargeAttacking && !isKnockbacked)
+      if (!isKnockbacked && !isAttacking)
       {
          _rigidbody.linearVelocityX = _input.Horizontal * moveSpeed;
          _rigidbody.linearVelocityY = _input.Vertical * moveSpeed;
@@ -58,21 +58,21 @@ public class PlayerController : MonoBehaviour
    private void Update()
    {
       //Keeps stock of what the last direction you moved in was ^ = -1, v = -3, < = 1, > = 3
-      if (_input.Horizontal != 0)
+      if (_input.Horizontal != 0 && !isAttacking)
       {
          moveDirection = _input.Horizontal + 2f;
       }
-      if (_input.Vertical != 0)
+      if (_input.Vertical != 0 && !isAttacking)
       {
          moveDirection = _input.Vertical - 2f;
       }
       
       //Changes the player direction based on input
-      if (_input.Horizontal != 0 && !isChargeAttacking)
+      if (_input.Horizontal != 0 && !isAttacking)
       {
          transform.localScale = new Vector2(Mathf.Sign(_input.Horizontal), 1f);
       }
-      if (_input.Vertical != 0 && !isChargeAttacking)
+      if (_input.Vertical != 0 && !isAttacking)
       {
          transform.localScale = new Vector2(1f, Mathf.Sign(_input.Vertical));
       }
@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour
          _input.Horizontal = 0;
          _input.Vertical = 0;
       }
+      
       
       
       Attack();
@@ -125,7 +126,6 @@ public class PlayerController : MonoBehaviour
    {
       if (_input.Attack && _canAttack)
       {
-         isAttacking = true;
          StartCoroutine(Attacking());
       }
    }
@@ -135,20 +135,23 @@ public class PlayerController : MonoBehaviour
    {
       if (moveDirection == 1 || moveDirection == 3)
       {
+         isAttacking = true;
          _canAttack = false;
          AttackHitboxHorizontal.SetActive(true);
          yield return new WaitForSeconds(0.5f);
          AttackHitboxHorizontal.SetActive(false);
+         isAttacking = false;
          _canAttack = true;
       }
 
       if (moveDirection == -1 || moveDirection == -3)
       {
-         
+         isAttacking = true;
          _canAttack = false;
          AttackHitboxVertical.SetActive(true);
          yield return new WaitForSeconds(0.5f);
          AttackHitboxVertical.SetActive(false);
+         isAttacking = false;
          _canAttack = true;
       }
       
@@ -168,6 +171,7 @@ public class PlayerController : MonoBehaviour
          
          yield return new WaitForSeconds(0.5f);
          AttackHitboxHorizontal.SetActive(false);
+         _canAttack = true;
       }
       
       //Vertical charging
@@ -184,7 +188,6 @@ public class PlayerController : MonoBehaviour
       
       _canAttack = true;
       isChargeAttacking = false;
-      isAttacking = false;
       _chargeTimer = chargeWait;
    }
 
