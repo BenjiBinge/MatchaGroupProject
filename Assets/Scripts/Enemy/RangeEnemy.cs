@@ -42,6 +42,8 @@ public class RangeEnemy : MonoBehaviour
         _player = FindFirstObjectByType<PlayerController>();
         canShoot = false;
         isDamaged = false;
+        
+        target = GameObject.Find("Player").transform;
     }
     
     
