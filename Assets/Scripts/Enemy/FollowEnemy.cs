@@ -4,6 +4,9 @@ public class FollowEnemy : MonoBehaviour
 {
   public float moveSpeed;
   public Transform target;
+  public float sightRange;
+  public float chaseRange;
+  public bool canChase;
 
   private Vector2 direction;
   private Rigidbody2D _rigidbody2D;
@@ -21,9 +24,11 @@ public class FollowEnemy : MonoBehaviour
   }
   private void Update()
   {
+    if (target == null) return;
+    
     SetDirectionDistance();
     _X = new Vector2(Mathf.Sign(direction.x) * moveSpeed, 0);
-    _Y = new Vector2(0, Mathf.Abs(direction.y))
+    _Y = new Vector2(0, Mathf.Abs(direction.y));
 
     if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
     {
@@ -33,12 +38,21 @@ public class FollowEnemy : MonoBehaviour
     {
       _rigidbody2D.linearVelocity = _Y;
     }
-  }
 
+    if (Vector2.Distance(target.position, transform.position) < sightRange)
+    {
+      canChase = true;
+    }
+    else if (Vector2.Distance(target.position, transform.position) > chaseRange)
+    {
+      canChase = false;
+    }
+    
+  }
   private void SetDirectionDistance()
   {
-    direction = (Vector2)PlayerMovement.Player.position - (Vector2)transform.position;
-    Mathf.Round(direction.x), Mathf.Round(direction.y);
+    direction = (Vector2)target.position - (Vector2)transform.position;
+    direction = new Vector2(Mathf.Round(direction.x), Mathf.Round(direction.y));
   }
 
 }
