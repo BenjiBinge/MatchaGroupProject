@@ -7,19 +7,21 @@ public class EnemySpawnControl : MonoBehaviour
     public GameObject[] spawners;
     public GameObject[] enemies;
     private float spawnCooldown = 1f;
-    private float spawnRadius;
+    private float spawnRadius = 10f;
+    private Transform _target;
 
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.aquamarine;
         Gizmos.DrawWireSphere(transform.position, spawnRadius);
+        _target = GameObject.Find("Player").transform;
     }
     
     private void Update()
     {
         //Cooldown for spawning
-        if (Time.time > spawnCooldown)
+        if (Time.time > spawnCooldown && Vector2.Distance(_target.position, transform.position) < spawnRadius)
         {
             StartCoroutine(SpawnEnemy());
         }

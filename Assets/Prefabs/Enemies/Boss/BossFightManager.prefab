@@ -53,13 +53,18 @@ MonoBehaviour:
   enemies:
   - {fileID: 2675060833902117878, guid: 92dab8157facfcf4b9f006a7f4dea186, type: 3}
   - {fileID: 742612453470649075, guid: 270c087e9377c6247a4edaa04b432e7a, type: 3}
+  bulletSpawners: []
+  bullet: {fileID: 8459115885753885934, guid: 25a61a6bad5ac33499f7483691c1a7ba, type: 3}
+  enemiesList: []
+  bulletExist: 0
   spawnCooldown: 4
   vulnerableCooldown: 20
   vulnerableTime: 8
+  bulletCooldown: 5
   fleshWall: {fileID: 7397013830787396708}
   heart: {fileID: 1056884573866725215}
-  tentacleWall1: {fileID: 0}
-  tentacleWall2: {fileID: 0}
+  deathWall1: {fileID: 0}
+  deathWall2: {fileID: 0}
   battleStarted: 0
   Phase1Active: 0
   Phase2Active: 0
