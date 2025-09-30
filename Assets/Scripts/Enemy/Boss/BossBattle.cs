@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class BossBattle : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class BossBattle : MonoBehaviour
     //Arrays for spawners and enemy types
     public GameObject[] spawners;
     public GameObject[] enemies;
+    private BossHeart _bossHeart;
+    public List<GameObject> enemiesList;
     
     
     //Timers
@@ -18,6 +21,8 @@ public class BossBattle : MonoBehaviour
     //Fleshwall and heart
     public GameObject fleshWall;
     public GameObject heart;
+    public GameObject deathWall1;
+    public GameObject deathWall2;
     
     //Bools to control current phase
     public bool battleStarted;
@@ -33,15 +38,35 @@ public class BossBattle : MonoBehaviour
     private void Start()
     {
         _animator = GetComponent<Animator>();
-        Phase1Active = true;
+        _bossHeart = GetComponentInChildren<BossHeart>();
+        //Phase1Active = true;
     }
 
     private void Update()
     {
+        //Checks if the boss' health is more or less than its halfway point
+        if (_bossHeart.currentBossHealth > (_bossHeart.maxBossHealth / 2))
+        {
+            Phase1Active = true;
+            Phase2Active = false;
+        }
+        if (_bossHeart.currentBossHealth < (_bossHeart.maxBossHealth / 2))
+        {
+            Phase2Active = true;
+            Phase1Active = false;
+        }
+        
+        //Activates either phase 1 or 2
         if (Phase1Active)
         {
             Phase1();
         }
+
+        if (Phase2Active)
+        {
+            Phase2();
+        }
+        
     }
     
     //Phase 1
@@ -57,6 +82,8 @@ public class BossBattle : MonoBehaviour
         
             spawnCooldown = Time.time + spawnCooldown;
             activeEnemies++;
+            //enemiesList.Add(clone);
+            
         }
 
         if (Time.time > vulnerableCooldown)
@@ -67,11 +94,21 @@ public class BossBattle : MonoBehaviour
         
     }
 
+    private void Phase2()
+    {
+        deathWall1.SetActive(true);
+        deathWall2.SetActive(true);
+        
+        
+    }
+    
 
     private IEnumerator Vulnerable()
     {
         
         fleshWall.SetActive(false);
+        
+        
         
         yield return new WaitForSeconds(vulnerableTime);
         fleshWall.SetActive(true);

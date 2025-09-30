@@ -7,8 +7,15 @@ public class EnemySpawnControl : MonoBehaviour
     public GameObject[] spawners;
     public GameObject[] enemies;
     private float spawnCooldown = 1f;
+    private float spawnRadius;
 
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.aquamarine;
+        Gizmos.DrawWireSphere(transform.position, spawnRadius);
+    }
+    
     private void Update()
     {
         //Cooldown for spawning

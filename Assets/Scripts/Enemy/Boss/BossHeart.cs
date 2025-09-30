@@ -1,12 +1,33 @@
+using System;
 using UnityEngine;
 using System.Collections;
 
 public class BossHeart : MonoBehaviour
 {
-    public float bossHealth;
+    //Health related
+    public float currentBossHealth;
+    public float maxBossHealth = 30f;
+    
+    //Damage related
     private float _damageCooldownTimer = 1f;
     public ParticleSystem BloodFX;
     public bool isDamaged;
+    private Animator _animator;
+
+    private void Start()
+    {
+        _animator = GetComponent<Animator>();
+        
+        
+    }
+
+    private void Update()
+    {
+        if (isDamaged == false)
+        {
+            _animator.Play("HeartPulse");
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -22,7 +43,8 @@ public class BossHeart : MonoBehaviour
         if (Time.time > _damageCooldownTimer)
         {
             isDamaged = true;
-            bossHealth--;
+            _animator.Play("HeartDamaged");
+            currentBossHealth--;
             _damageCooldownTimer = Time.time + 1f;
             BloodFX.Play();
             
@@ -30,7 +52,7 @@ public class BossHeart : MonoBehaviour
             isDamaged = false;
             
             //Destroys enemy on death
-            if (bossHealth <= 0)
+            if (currentBossHealth <= 0)
             {
                 Destroy(gameObject);
             }

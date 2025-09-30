@@ -101,7 +101,9 @@ public class FollowEnemy : MonoBehaviour
         {
             StartCoroutine(TakeDamage());
         }
+        
     }
+    
     
     
     

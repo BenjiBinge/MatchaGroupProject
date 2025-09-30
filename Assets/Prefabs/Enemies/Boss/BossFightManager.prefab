@@ -58,6 +58,8 @@ MonoBehaviour:
   vulnerableTime: 8
   fleshWall: {fileID: 7397013830787396708}
   heart: {fileID: 1056884573866725215}
+  tentacleWall1: {fileID: 0}
+  tentacleWall2: {fileID: 0}
   battleStarted: 0
   Phase1Active: 0
   Phase2Active: 0
