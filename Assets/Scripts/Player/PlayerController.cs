@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
    public bool isAttacking;
    public bool isChargeAttacking;
    private bool _canAttack = true;
+   private bool _invincible;
 
    //Charge attack timer variables
    public float chargeWait = 2f;
@@ -46,7 +47,7 @@ public class PlayerController : MonoBehaviour
    private void FixedUpdate()
    {
       //Vertical + Horizontal movement
-      if (!isKnockbacked && !isAttacking)
+      if (!isKnockbacked && !isAttacking && !isChargeAttacking)
       {
          _rigidbody.linearVelocityX = _input.Horizontal * moveSpeed;
          _rigidbody.linearVelocityY = _input.Vertical * moveSpeed;
@@ -58,21 +59,21 @@ public class PlayerController : MonoBehaviour
    private void Update()
    {
       //Keeps stock of what the last direction you moved in was ^ = -1, v = -3, < = 1, > = 3
-      if (_input.Horizontal != 0 && !isAttacking)
+      if (_input.Horizontal != 0 && !isAttacking && !isChargeAttacking)
       {
          moveDirection = _input.Horizontal + 2f;
       }
-      if (_input.Vertical != 0 && !isAttacking)
+      if (_input.Vertical != 0 && !isAttacking && !isChargeAttacking)
       {
          moveDirection = _input.Vertical - 2f;
       }
       
       //Changes the player direction based on input
-      if (_input.Horizontal != 0 && !isAttacking)
+      if (_input.Horizontal != 0 && !isAttacking && !isChargeAttacking)
       {
          transform.localScale = new Vector2(Mathf.Sign(_input.Horizontal), 1f);
       }
-      if (_input.Vertical != 0 && !isAttacking)
+      if (_input.Vertical != 0 && !isAttacking && !isChargeAttacking)
       {
          transform.localScale = new Vector2(1f, Mathf.Sign(_input.Vertical));
       }
@@ -137,22 +138,30 @@ public class PlayerController : MonoBehaviour
       {
          isAttacking = true;
          _canAttack = false;
+         _invincible = true;
          AttackHitboxHorizontal.SetActive(true);
+         
          yield return new WaitForSeconds(0.5f);
+         
          AttackHitboxHorizontal.SetActive(false);
          isAttacking = false;
          _canAttack = true;
+         _invincible = false;
       }
 
       if (moveDirection == -1 || moveDirection == -3)
       {
          isAttacking = true;
          _canAttack = false;
+         _invincible = true;
          AttackHitboxVertical.SetActive(true);
+         
          yield return new WaitForSeconds(0.5f);
+         
          AttackHitboxVertical.SetActive(false);
          isAttacking = false;
          _canAttack = true;
+         _invincible = false;
       }
       
    }
@@ -165,6 +174,7 @@ public class PlayerController : MonoBehaviour
       if (moveDirection == 1 || moveDirection == 3)
       {
          isChargeAttacking = true;
+         _invincible = true;
          _rigidbody.linearVelocityX += (moveDirection - 2) * chargeSpeed;
          _canAttack = false;
          AttackHitboxHorizontal.SetActive(true);
@@ -178,6 +188,7 @@ public class PlayerController : MonoBehaviour
       if (moveDirection == -1 || moveDirection == -3)
       {
          isChargeAttacking = true;
+         _invincible = true;
          _rigidbody.linearVelocityY += (moveDirection + 2) * chargeSpeed;
          _canAttack = false;
          AttackHitboxVertical.SetActive(true);
@@ -187,6 +198,7 @@ public class PlayerController : MonoBehaviour
       }
       
       _canAttack = true;
+      _invincible = false;
       isChargeAttacking = false;
       _chargeTimer = chargeWait;
    }
@@ -195,13 +207,13 @@ public class PlayerController : MonoBehaviour
    private void OnCollisionEnter2D(Collision2D other)
    {
       //When player collides with anything with the "Enemy" tag
-      if (other.gameObject.CompareTag("Enemy"))
+      if (other.gameObject.CompareTag("Enemy") && !_invincible)
       {
          StartCoroutine(TakeDamage());
       }
 
       //When player collides with objects with "Bullet" tag
-      if (other.gameObject.CompareTag("Bullet"))
+      if (other.gameObject.CompareTag("Bullet") && !_invincible)
       {
          StartCoroutine(TakeDamage());
          Destroy(other.gameObject);
