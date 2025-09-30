@@ -1,0 +1,381 @@
+fileFormatVersion: 2
+guid: 75ba619d5fa232447af5a4594f975a6f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -333064921690947038
+    second: Boss_wall-Sheet_0
+  - first:
+      213: -8869305227184047738
+    second: Boss_wall-Sheet_1
+  - first:
+      213: -8706304906718193423
+    second: Boss_wall-Sheet_2
+  - first:
+      213: -8785551325643297662
+    second: Boss_wall-Sheet_3
+  - first:
+      213: -8681470872901839790
+    second: Boss_wall-Sheet_4
+  - first:
+      213: 7034841738649015253
+    second: Boss_wall-Sheet_5
+  - first:
+      213: 1601092995715694390
+    second: Boss_wall-Sheet_6
+  - first:
+      213: -1340371603174719051
+    second: Boss_wall-Sheet_7
+  - first:
+      213: -3202511976948046413
+    second: Boss_wall-Sheet_8
+  - first:
+      213: -4761207199018857133
+    second: Boss_wall-Sheet_9
+  - first:
+      213: -1573656022900923414
+    second: Boss_wall-Sheet_10
+  - first:
+      213: 1781854098675899562
+    second: Boss_wall-Sheet_11
+  - first:
+      213: 6081553670761879080
+    second: Boss_wall-Sheet_12
+  - first:
+      213: -2359668523877432774
+    second: Boss_wall-Sheet_13
+  - first:
+      213: -536558465124871268
+    second: Boss_wall-Sheet_14
+  - first:
+      213: -7801057746692221621
+    second: Boss_wall-Sheet_15
+  - first:
+      213: -4039158590564024455
+    second: Boss_wall-Sheet_16
+  - first:
+      213: -2953578751169519538
+    second: Boss_wall-Sheet_17
+  - first:
+      213: 8939565228324971932
+    second: Boss_wall-Sheet_18
+  - first:
+      213: -5383953375519573964
+    second: Boss_wall-Sheet_19
+  - first:
+      213: 5351605429593012957
+    second: Boss_wall-Sheet_20
+  - first:
+      213: -4557735293527030159
+    second: Boss_wall-Sheet_21
+  - first:
+      213: 8038671857389818243
+    second: Boss_wall-Sheet_22
+  - first:
+      213: 6808897967133325415
+    second: Boss_wall-Sheet_23
+  - first:
+      213: -1560344849630092160
+    second: Boss_wall-Sheet_24
+  - first:
+      213: -714255252563157936
+    second: Boss_wall-Sheet_25
+  - first:
+      213: -2590584344475532082
+    second: Boss_wall-Sheet_26
+  - first:
+      213: -5038327264903709141
+    second: Boss_wall-Sheet_27
+  - first:
+      213: 5454947075910785164
+    second: Boss_wall-Sheet_28
+  - first:
+      213: 3818792697559569453
+    second: Boss_wall-Sheet_29
+  - first:
+      213: 8653091247221261948
+    second: Boss_wall-Sheet_30
+  - first:
+      213: 4140446330150693987
+    second: Boss_wall-Sheet_31
+  - first:
+      213: -3060893414310116003
+    second: Boss_wall-Sheet_32
+  - first:
+      213: 6110160289851667710
+    second: Boss_wall-Sheet_33
+  - first:
+      213: -4079847948600934445
+    second: Boss_wall-Sheet_34
+  - first:
+      213: -8820004849410660303
+    second: Boss_wall-Sheet_35
+  - first:
+      213: 7503949562595072713
+    second: Boss_wall-Sheet_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss_wall-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 105
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 222c777e737b06bf0800000000000000
+      internalID: -333064921690947038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_wall-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 105
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 689fd2133e5e9e480800000000000000
+      internalID: -8869305227184047738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_wall-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 105
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f852d8b0ddfc2780800000000000000
+      internalID: -8706304906718193423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_wall-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 105
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28ca11ffd93731680800000000000000
+      internalID: -8785551325643297662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_wall-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 0
+        width: 105
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25419cccc38358780800000000000000
+      internalID: -8681470872901839790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_wall-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 0
+        width: 105
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d314430a47c0a160800000000000000
+      internalID: 7034841738649015253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 921323990aef4724380ec044b5459c05
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":105.0,"y":106.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Boss_wall-Sheet_0: -333064921690947038
+      Boss_wall-Sheet_1: -8869305227184047738
+      Boss_wall-Sheet_2: -8706304906718193423
+      Boss_wall-Sheet_3: -8785551325643297662
+      Boss_wall-Sheet_4: -8681470872901839790
+      Boss_wall-Sheet_5: 7034841738649015253
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

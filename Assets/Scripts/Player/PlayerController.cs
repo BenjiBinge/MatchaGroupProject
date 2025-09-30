@@ -250,6 +250,8 @@ public class PlayerController : MonoBehaviour
          playerHealth++;
          Destroy(other.gameObject);
       }
+      
+      
    }
    
 }

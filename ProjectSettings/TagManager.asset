@@ -10,6 +10,7 @@ TagManager:
   - Lever
   - Heal
   - Bullet
+  - nodmg
   layers:
   - Default
   - TransparentFX

@@ -896,6 +896,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RangeEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3164641693604904390, guid: 92dab8157facfcf4b9f006a7f4dea186, type: 3}
+      propertyPath: m_TagString
+      value: nodmg
+      objectReference: {fileID: 0}
     - target: {fileID: 6062394753317118965, guid: 92dab8157facfcf4b9f006a7f4dea186, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.17045

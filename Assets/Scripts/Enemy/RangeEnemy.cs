@@ -35,7 +35,8 @@ public class RangeEnemy : MonoBehaviour
 
     private PlayerController _player;
     [SerializeField] private LayerMask whatIsPlayer;
-
+    private Collider2D[] _colliders;
+    
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -44,6 +45,8 @@ public class RangeEnemy : MonoBehaviour
         isDamaged = false;
         
         target = GameObject.Find("Player").transform;
+
+        _colliders = gameObject.GetComponents<Collider2D>();
     }
     
     
@@ -127,6 +130,8 @@ public class RangeEnemy : MonoBehaviour
         bulletExist = false;
     }
 
+    
+
     //When player is inside line of sight
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -135,9 +140,12 @@ public class RangeEnemy : MonoBehaviour
             canShoot = true;
         }
 
-        if (other.gameObject.CompareTag("AttackHitbox"))
+        if (_colliders[0].IsTouching(other.gameObject.GetComponent<Collider2D>()))
         {
-            StartCoroutine(TakeDamage());
+            if (other.gameObject.CompareTag("AttackHitbox"))
+            {
+                StartCoroutine(TakeDamage());
+            }
         }
     }
     
