@@ -9,11 +9,13 @@ public class BossBattle : MonoBehaviour
     public GameObject[] spawners;
     public GameObject[] enemies;
     
+    
     //Timers
     public float spawnCooldown;
     public float vulnerableCooldown;
     public float vulnerableTime;
 
+    //Fleshwall and heart
     public GameObject fleshWall;
     public GameObject heart;
     
@@ -21,6 +23,10 @@ public class BossBattle : MonoBehaviour
     public bool battleStarted;
     public bool Phase1Active;
     public bool Phase2Active;
+
+    //Max and current amount of enemies
+    public float activeEnemies;
+    public float maxEnemies;
 
 
 
@@ -41,7 +47,7 @@ public class BossBattle : MonoBehaviour
     //Phase 1
     private void Phase1()
     {
-        if (Time.time > spawnCooldown)
+        if (Time.time > spawnCooldown && activeEnemies < maxEnemies)
         {
             int randomSpawner = Random.Range(0, spawners.Length);
             int randomEnemy = Random.Range(0, enemies.Length);
@@ -50,6 +56,7 @@ public class BossBattle : MonoBehaviour
             Instantiate(enemies[randomEnemy], spawners[randomSpawner].transform.position, Quaternion.identity);
         
             spawnCooldown = Time.time + spawnCooldown;
+            activeEnemies++;
         }
 
         if (Time.time > vulnerableCooldown)
@@ -67,6 +74,8 @@ public class BossBattle : MonoBehaviour
         fleshWall.SetActive(false);
         
         yield return new WaitForSeconds(vulnerableTime);
+        fleshWall.SetActive(true);
+        vulnerableCooldown = Time.time + vulnerableTime;
     }
     
     

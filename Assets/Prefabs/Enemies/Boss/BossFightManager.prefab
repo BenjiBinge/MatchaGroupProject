@@ -47,16 +47,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e8fd188525985540b0109d8bb958894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossBattle
-  spawners: []
-  enemies: []
+  spawners:
+  - {fileID: 0}
+  - {fileID: 0}
+  enemies:
+  - {fileID: 2675060833902117878, guid: 92dab8157facfcf4b9f006a7f4dea186, type: 3}
+  - {fileID: 742612453470649075, guid: 270c087e9377c6247a4edaa04b432e7a, type: 3}
   spawnCooldown: 4
   vulnerableCooldown: 20
-  vulnerableTime: 10
+  vulnerableTime: 8
   fleshWall: {fileID: 7397013830787396708}
   heart: {fileID: 1056884573866725215}
   battleStarted: 0
   Phase1Active: 0
   Phase2Active: 0
+  activeEnemies: 0
+  maxEnemies: 3
 --- !u!95 &7389892019870267861
 Animator:
   serializedVersion: 7

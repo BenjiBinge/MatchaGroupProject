@@ -52,6 +52,12 @@ public class RangeEnemy : MonoBehaviour
     
     private void Update()
     {
+        if (isDamaged)
+        {
+            _rigidbody.linearVelocityX = 0;
+            _rigidbody.linearVelocityY = 0;
+        }
+        
         //Chases the player if the bool is true
         if (canChase && !isDamaged)
         {
@@ -115,6 +121,7 @@ public class RangeEnemy : MonoBehaviour
     {
         direction = (Vector2)target.position - (Vector2)transform.position;
         direction = new Vector2(Mathf.Round(direction.x), Mathf.Round(direction.y));
+        
     }
 
     //Shoots a bullet
