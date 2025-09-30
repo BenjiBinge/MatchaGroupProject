@@ -36,11 +36,15 @@ public class RangeEnemy : MonoBehaviour
     private PlayerController _player;
     [SerializeField] private LayerMask whatIsPlayer;
     private Collider2D[] _colliders;
+
+    private RangeEnemyAnimation _animation;
     
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _player = FindFirstObjectByType<PlayerController>();
+        _animation = GetComponent<RangeEnemyAnimation>();
+        
         canShoot = false;
         isDamaged = false;
         
@@ -63,6 +67,8 @@ public class RangeEnemy : MonoBehaviour
         {
             SetDirectionDistance();
         }
+        
+        _animation.UpdateAnimation(canChase, canShoot, isDamaged);
 
         //Counts down until the enemy can shoot
         if (canShoot && _shootCooldown > 0)
@@ -114,6 +120,9 @@ public class RangeEnemy : MonoBehaviour
         _rigidbody.linearVelocity = direction;
         var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         RotationPoint.rotation = Quaternion.Euler(0, 0, angle);
+        
+        _animation.UpdateMoveDirection(direction);
+        
     }
 
     //Moves towards the player
