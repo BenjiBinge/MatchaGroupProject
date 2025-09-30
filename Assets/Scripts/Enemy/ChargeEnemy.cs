@@ -37,7 +37,7 @@ public class ChargeEnemy : MonoBehaviour
     }
     private void Update()
     {
-        SetDirectionDistance();
+        //SetDirectionDistance();
         _X = new Vector2(Mathf.Sign(_moveDirection.x) * moveSpeed, 0);
         _Y = new Vector2(0, Mathf.Sign(_moveDirection.y) * moveSpeed);
 
