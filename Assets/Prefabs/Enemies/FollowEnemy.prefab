@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &582188686850721147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3322689476768938976}
+  m_Layer: 0
+  m_Name: RotPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3322689476768938976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582188686850721147}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8248800361652871388}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &742612453470649075
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,7 +63,8 @@ Transform:
   m_LocalPosition: {x: -7.47, y: -1.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3322689476768938976}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7712447709550907492
@@ -178,5 +210,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a52608cff48064a4587290c59225070c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FollowEnemy
-  moveSpeed: 1
+  enemyHealth: 2
+  moveSpeed: 3
+  direction: {x: 0, y: 0}
   target: {fileID: 0}
+  RotationPoint: {fileID: 3322689476768938976}
+  isDamaged: 0
+  BloodFX: {fileID: 1050217280674272984, guid: 52e72958e8cff304587e6b844e14fdff, type: 3}
+  canChase: 0
+  chaseRange: 10
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 0

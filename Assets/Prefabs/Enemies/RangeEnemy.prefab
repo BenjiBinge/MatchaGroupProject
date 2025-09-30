@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 1783135655865323668}
   m_Layer: 0
   m_Name: LineOfSight
-  m_TagString: Untagged
+  m_TagString: nodmg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

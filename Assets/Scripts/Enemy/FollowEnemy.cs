@@ -11,6 +11,7 @@ public class FollowEnemy : MonoBehaviour
     private Rigidbody2D _rigidbody;
     public Transform target;
     private Vector2 _X, _Y;
+    public Transform RotationPoint;
     
     //dmg related
     private float _damageCooldownTimer = 1f;
@@ -30,6 +31,8 @@ public class FollowEnemy : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _player = FindFirstObjectByType<PlayerController>();
         isDamaged = false;
+        
+        target = GameObject.Find("Player").transform;
     }
     
     private void Update()
@@ -55,6 +58,18 @@ public class FollowEnemy : MonoBehaviour
             _rigidbody.linearVelocityX = 0;
             _rigidbody.linearVelocityY = 0;
         }
+        
+        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+        {
+            SetDirection(_X);
+            
+        }
+
+        if (Mathf.Abs(direction.x) < Mathf.Abs(direction.y))
+        {
+            SetDirection(_Y);
+            
+        }
 
         
     }
@@ -73,6 +88,17 @@ public class FollowEnemy : MonoBehaviour
         direction = new Vector2(Mathf.Round(direction.x), Mathf.Round(direction.y));
     }
 
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("AttackHitbox"))
+        {
+            StartCoroutine(TakeDamage());
+        }
+    }
+    
+    
+    
     //Takes damage
     private IEnumerator TakeDamage()
     {
