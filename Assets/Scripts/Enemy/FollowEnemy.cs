@@ -42,6 +42,12 @@ public class FollowEnemy : MonoBehaviour
         {
             SetDirectionDistance();
         }
+
+        if (isDamaged)
+        {
+            _rigidbody.linearVelocityX = 0;
+            _rigidbody.linearVelocityY = 0;
+        }
         
         _X = new Vector2(Mathf.Sign(direction.x) * moveSpeed, 0);
         _Y = new Vector2(0, Mathf.Sign(direction.y) * moveSpeed);
@@ -95,7 +101,9 @@ public class FollowEnemy : MonoBehaviour
         {
             StartCoroutine(TakeDamage());
         }
+        
     }
+    
     
     
     
