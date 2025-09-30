@@ -219,7 +219,7 @@ MonoBehaviour:
   bulletSpeed: 3
   bulletExist: 0
   isDamaged: 0
-  BloodFX: {fileID: 0}
+  BloodFX: {fileID: 4028317903003843952}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 0
@@ -470,6 +470,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52e72958e8cff304587e6b844e14fdff, type: 3}
+--- !u!198 &4028317903003843952 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1050217280674272984, guid: 52e72958e8cff304587e6b844e14fdff, type: 3}
+  m_PrefabInstance: {fileID: 4140051361959177128}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8906891215866922239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4823294289213222743, guid: 52e72958e8cff304587e6b844e14fdff, type: 3}
