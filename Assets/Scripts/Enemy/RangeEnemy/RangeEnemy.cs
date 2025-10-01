@@ -178,7 +178,18 @@ public class RangeEnemy : MonoBehaviour
     //Takes damage
     private IEnumerator TakeDamage()
     {
-        if (Time.time > _damageCooldownTimer)
+        //Is instakilled if player charge-attacks
+        if (Time.time > _damageCooldownTimer && _player.isChargeAttacking)
+        {
+            isDamaged = true;
+            BloodFX.Play();
+             
+            yield return new WaitForSeconds(1f);
+             
+            Destroy(gameObject);
+        }
+        
+        else if (Time.time > _damageCooldownTimer)
         {
             isDamaged = true;
             enemyHealth--;

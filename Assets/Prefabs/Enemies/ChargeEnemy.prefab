@@ -215,7 +215,7 @@ MonoBehaviour:
   isDamaged: 0
   BloodFX: {fileID: 5833524890396341973}
   canChase: 1
-  chaseRange: 10
+  chaseRange: 50
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 0

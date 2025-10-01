@@ -37,12 +37,17 @@ public class PlayerController : MonoBehaviour
    private float _chargeTimer = 2f;
 
    private SpriteRenderer _spriteRenderer;
+
+   private PlayerAnimationScript _animator;
    
    private void Start()
    {
       _input = GetComponent<InputManager>();
       _rigidbody = GetComponent<Rigidbody2D>();
       _spriteRenderer = GetComponent<SpriteRenderer>();
+      
+      _animator = GetComponent<PlayerAnimationScript>();
+      
    }
 
 
@@ -67,6 +72,8 @@ public class PlayerController : MonoBehaviour
       {
          moveDirection = _input.Vertical - 2f;
       }
+
+      //_animator.UpdateAnimation(isAttacking, isChargeAttacking,isKnockbacked, _input );
       
       //Changes the player direction based on input
       if (_input.Horizontal != 0 && !isAttacking && !isChargeAttacking)
@@ -93,6 +100,14 @@ public class PlayerController : MonoBehaviour
       {
          _input.Horizontal = 0;
          _input.Vertical = 0;
+         
+      }
+
+      //Hinders the slide-attack bug
+      if ((_input.Horizontal == 0 || _input.Vertical == 0) && !isChargeAttacking)
+      {
+         _rigidbody.linearVelocityX = 0;
+         _rigidbody.linearVelocityY = 0;
       }
       
       
