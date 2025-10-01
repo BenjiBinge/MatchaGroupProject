@@ -13,12 +13,14 @@ public class BossHeart : MonoBehaviour
     public ParticleSystem BloodFX;
     public bool isDamaged;
     private Animator _animator;
+    
+    private PlayerController _player;
 
     private void Start()
     {
         _animator = GetComponent<Animator>();
-        
-        
+        _player = FindFirstObjectByType<PlayerController>();
+
     }
 
     private void Update()
@@ -39,8 +41,18 @@ public class BossHeart : MonoBehaviour
 
     private IEnumerator TakeDamage()
     {
+        //Is instakilled if player charge-attacks
+        if (Time.time > _damageCooldownTimer && _player.isChargeAttacking)
+        {
+            isDamaged = true;
+            BloodFX.Play();
+             
+            yield return new WaitForSeconds(1f);
+             
+            Destroy(gameObject);
+        }
         
-        if (Time.time > _damageCooldownTimer)
+        else if (Time.time > _damageCooldownTimer)
         {
             isDamaged = true;
             _animator.Play("HeartDamaged");

@@ -216,7 +216,7 @@ MonoBehaviour:
   canChase: 0
   canShoot: 1
   shootRange: 5
-  chaseRange: 8
+  chaseRange: 50
   bulletSpeed: 3
   bulletExist: 0
   isDamaged: 0

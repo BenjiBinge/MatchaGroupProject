@@ -106,16 +106,6 @@ public class ChargeEnemy : MonoBehaviour
             }
 
         }
-
-        /*if (canDash)
-        {
-            Vector3 direction = (target.position - transform.position).normalized;
-            direction = direction;
-            _rigidbody.linearVelocity = Vector2.zero;
-            canDash = false;
-            StartCoroutine(Dash());
-            
-        }*/
         
 
     }
@@ -164,7 +154,18 @@ public class ChargeEnemy : MonoBehaviour
      //Deals damage to the enemy
      private IEnumerator TakeDamage()
      {
-         if (Time.time > _damageCooldownTimer)
+         //Is instakilled if player charge-attacks
+         if (Time.time > _damageCooldownTimer && _player.isChargeAttacking)
+         {
+             isDamaged = true;
+             BloodFX.Play();
+             
+             yield return new WaitForSeconds(1f);
+             
+             Destroy(gameObject);
+         }
+         
+         else if (Time.time > _damageCooldownTimer)
          {
              isDamaged = true;
              enemyHealth--;
@@ -191,13 +192,7 @@ public class ChargeEnemy : MonoBehaviour
          _dashCooldown = Time.time + 2f;
          isDashing = false;
          
-         /*yield return new WaitForSeconds(2f);
-         
-         
-         _rigidbody.linearVelocity = Vector2.zero;
-         yield return new WaitForSeconds(dashCooldown);
-         isDashing = false;*/
-         
+
      }
      
 
