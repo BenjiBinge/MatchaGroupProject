@@ -24,12 +24,15 @@ public class FollowEnemy : MonoBehaviour
     
     private PlayerController _player;
     [SerializeField] private LayerMask whatIsPlayer;
+    
+    private FollowAnimationScript _animation;
 
     
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _player = FindFirstObjectByType<PlayerController>();
+        _animation = GetComponent<FollowAnimationScript>();
         isDamaged = false;
         
         target = GameObject.Find("Player").transform;
@@ -42,6 +45,8 @@ public class FollowEnemy : MonoBehaviour
         {
             SetDirectionDistance();
         }
+        
+        _animation.UpdateAnimation(canChase, isDamaged);
 
         if (isDamaged)
         {
@@ -76,6 +81,7 @@ public class FollowEnemy : MonoBehaviour
             SetDirection(_Y);
             
         }
+        
 
         
     }
@@ -85,6 +91,8 @@ public class FollowEnemy : MonoBehaviour
         _rigidbody.linearVelocity = direction;
         var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         RotationPoint.rotation = Quaternion.Euler(0, 0, angle);
+        
+        _animation.UpdateMoveDirection(direction);
     }
     
     //Moves towards the player
@@ -92,6 +100,7 @@ public class FollowEnemy : MonoBehaviour
     {
         direction = (Vector2)target.position - (Vector2)transform.position;
         direction = new Vector2(Mathf.Round(direction.x), Mathf.Round(direction.y));
+        
     }
 
 
@@ -119,6 +128,8 @@ public class FollowEnemy : MonoBehaviour
             
             yield return new WaitForSeconds(1f);
             isDamaged = false;
+            
+            _animation.UpdateAnimation(canChase, isDamaged);
             
             //Destroys enemy on death
             if (enemyHealth <= 0)
