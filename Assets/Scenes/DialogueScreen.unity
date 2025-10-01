@@ -231,9 +231,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueScript
   lines:
-  - this is a test.
-  - testing testing,
-  - another test.
+  - 'Well done. '
+  - 'You will soon find the core of the dungeon. '
+  - As expected, the evil inhabitats of this world will do anything to defend it.
+  - Eliminate the creatures.
+  - They are nothing but senseless beings with no instincts other than killing.
   dialogueText: {fileID: 1742487870}
   characterPerSecond: 20
 --- !u!114 &1287408355
@@ -384,8 +386,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
