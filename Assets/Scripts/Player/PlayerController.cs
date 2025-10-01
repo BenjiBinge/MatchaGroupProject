@@ -36,11 +36,13 @@ public class PlayerController : MonoBehaviour
    public float chargeWait = 2f;
    private float _chargeTimer = 2f;
 
+   private SpriteRenderer _spriteRenderer;
    
    private void Start()
    {
       _input = GetComponent<InputManager>();
       _rigidbody = GetComponent<Rigidbody2D>();
+      _spriteRenderer = GetComponent<SpriteRenderer>();
    }
 
 
@@ -52,9 +54,7 @@ public class PlayerController : MonoBehaviour
          _rigidbody.linearVelocityX = _input.Horizontal * moveSpeed;
          _rigidbody.linearVelocityY = _input.Vertical * moveSpeed;
       }
-      
    }
-
 
    private void Update()
    {
@@ -72,10 +72,20 @@ public class PlayerController : MonoBehaviour
       if (_input.Horizontal != 0 && !isAttacking && !isChargeAttacking)
       {
          transform.localScale = new Vector2(Mathf.Sign(_input.Horizontal), 1f);
+         _spriteRenderer.flipY = false;
       }
       if (_input.Vertical != 0 && !isAttacking && !isChargeAttacking)
       {
          transform.localScale = new Vector2(1f, Mathf.Sign(_input.Vertical));
+         
+         if (_input.Vertical > 0)
+         {
+            _spriteRenderer.flipY = false;
+         }
+         else
+         {
+            _spriteRenderer.flipY = true;
+         }
       }
       
       //Forces four-directional movement. No Diagonal!

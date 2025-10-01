@@ -57,9 +57,9 @@ public class RangeEnemyAnimation : MonoBehaviour
 
     private int _currentAnimation;
 
-    private static readonly int Idle = Animator.StringToHash("Idle");
-    private static readonly int Walk = Animator.StringToHash("Walk");
-    private static readonly int Damage = Animator.StringToHash("Damage");
-    private static readonly int Cast = Animator.StringToHash("Cast");
+    private static readonly int Idle = Animator.StringToHash("idle");
+    private static readonly int Walk = Animator.StringToHash("walk");
+    private static readonly int Damage = Animator.StringToHash("damage");
+    private static readonly int Cast = Animator.StringToHash("cast");
    
 }

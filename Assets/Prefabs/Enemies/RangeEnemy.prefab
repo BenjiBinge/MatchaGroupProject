@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 7921525838715260761}
   - component: {fileID: 2174933921767706285}
   - component: {fileID: 3008222273224221375}
+  - component: {fileID: 6878354578660552625}
   m_Layer: 0
   m_Name: RangeEnemy
   m_TagString: Enemy
@@ -245,6 +246,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6878354578660552625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2675060833902117878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ce844fba428aa4099261f536224206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RangeEnemyAnimation
+  castAnimTime: 0.1
+  damageAnimTime: 0.05
 --- !u!1 &3164641693604904390
 GameObject:
   m_ObjectHideFlags: 0
