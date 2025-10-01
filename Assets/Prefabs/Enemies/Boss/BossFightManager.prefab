@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.91177, y: -0.48612, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6501085110856508354}
@@ -53,23 +53,28 @@ MonoBehaviour:
   enemies:
   - {fileID: 2675060833902117878, guid: 92dab8157facfcf4b9f006a7f4dea186, type: 3}
   - {fileID: 742612453470649075, guid: 270c087e9377c6247a4edaa04b432e7a, type: 3}
-  bulletSpawners: []
+  - {fileID: 5009952159107444103, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
+  bulletSpawners:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   bullet: {fileID: 8459115885753885934, guid: 25a61a6bad5ac33499f7483691c1a7ba, type: 3}
   enemiesList: []
   bulletExist: 0
-  spawnCooldown: 4
+  spawnCooldown: 3
   vulnerableCooldown: 20
   vulnerableTime: 8
   bulletCooldown: 5
   fleshWall: {fileID: 7397013830787396708}
   heart: {fileID: 1056884573866725215}
-  deathWall1: {fileID: 0}
-  deathWall2: {fileID: 0}
-  battleStarted: 0
   Phase1Active: 0
   Phase2Active: 0
   activeEnemies: 0
   maxEnemies: 3
+  HealItem: {fileID: 5569752706116827139, guid: a1555facf1065e148a53c4d69760f449, type: 3}
+  healSpawn: {fileID: 0}
 --- !u!95 &7389892019870267861
 Animator:
   serializedVersion: 7
@@ -100,17 +105,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2729535409780609249}
     m_Modifications:
+    - target: {fileID: 1848132136608576765, guid: 893e5dc635e720447b6144b26af50c9b, type: 3}
+      propertyPath: currentBossHealth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1978401754143697500, guid: 893e5dc635e720447b6144b26af50c9b, type: 3}
       propertyPath: m_Name
       value: BossHeart
       objectReference: {fileID: 0}
     - target: {fileID: 5757290773590230721, guid: 893e5dc635e720447b6144b26af50c9b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.45
       objectReference: {fileID: 0}
     - target: {fileID: 5757290773590230721, guid: 893e5dc635e720447b6144b26af50c9b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.61
       objectReference: {fileID: 0}
     - target: {fileID: 5757290773590230721, guid: 893e5dc635e720447b6144b26af50c9b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -169,7 +178,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1729483506023419901, guid: 5189c1aabe93b1c499ae6e5029284356, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1729483506023419901, guid: 5189c1aabe93b1c499ae6e5029284356, type: 3}
       propertyPath: m_LocalPosition.y

@@ -7,10 +7,6 @@ public class PlayerHealthController : MonoBehaviour
     public PlayerController target;
     public Image[] hearts;
     
-    
-    public SpriteRenderer heartSprite1;
-    public SpriteRenderer heartSprite2;
-    public SpriteRenderer heartSprite3;
     public Sprite empty;
     public Sprite full;
     

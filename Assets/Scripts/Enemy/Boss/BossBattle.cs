@@ -25,11 +25,8 @@ public class BossBattle : MonoBehaviour
     //Fleshwall and heart
     public GameObject fleshWall;
     public GameObject heart;
-    public GameObject deathWall1;
-    public GameObject deathWall2;
     
     //Bools to control current phase
-    public bool battleStarted;
     public bool Phase1Active;
     public bool Phase2Active;
 
@@ -37,6 +34,14 @@ public class BossBattle : MonoBehaviour
     public float activeEnemies;
     public float maxEnemies;
     
+    private FollowEnemy _follow;
+    private RangeEnemy  _range;
+    private ChargeEnemy  _charge;
+    
+    //HealItem related
+    public GameObject HealItem;
+    private float _healCooldown = 10f;
+    public Transform healSpawn;
 
 
 
@@ -44,14 +49,26 @@ public class BossBattle : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         _bossHeart = GetComponentInChildren<BossHeart>();
-        //Phase1Active = true;
-        Phase2Active = true;
+
+        _follow = FindFirstObjectByType<FollowEnemy>();
+        _range = FindFirstObjectByType<RangeEnemy>();
+        _charge = FindFirstObjectByType<ChargeEnemy>();
+
+        /*_follow.chaseRange = 50f;
+        _follow.enemyHealth = 1f;
+        
+        _range.chaseRange = 50f;
+        _range.enemyHealth = 1f;
+        
+        _charge.chaseRange = 50f;
+        _charge.enemyHealth = 1f;*/
+
     }
 
     private void Update()
     {
         //Checks if the boss' health is more or less than its halfway point
-        /*if (_bossHeart.currentBossHealth > (_bossHeart.maxBossHealth / 2))
+        if (_bossHeart.currentBossHealth > (_bossHeart.maxBossHealth / 2))
         {
             Phase1Active = true;
             Phase2Active = false;
@@ -60,7 +77,7 @@ public class BossBattle : MonoBehaviour
         {
             Phase2Active = true;
             Phase1Active = false;
-        }*/
+        }
         
         //Activates either phase 1 or 2
         if (Phase1Active)
@@ -72,13 +89,26 @@ public class BossBattle : MonoBehaviour
         {
             Phase2();
         }
+
+        if (Time.time > _healCooldown)
+        {
+            Instantiate(HealItem, healSpawn.position, Quaternion.identity);
+            _healCooldown = Time.time + 10f;
+        }
+
+        if (_bossHeart.currentBossHealth <= 0)
+        {
+            Destroy(fleshWall);
+            Phase1Active =  false;
+            Phase2Active = false;
+        }
         
     }
     
     //Phase 1
     private void Phase1()
     {
-        if (Time.time > spawnCooldown && activeEnemies < maxEnemies)
+        if (Time.time > spawnCooldown)
         {
             int randomSpawner = Random.Range(0, spawners.Length);
             int randomEnemy = Random.Range(0, enemies.Length);
@@ -87,8 +117,6 @@ public class BossBattle : MonoBehaviour
             Instantiate(enemies[randomEnemy], spawners[randomSpawner].transform.position, Quaternion.identity);
         
             spawnCooldown = Time.time + spawnCooldown;
-            activeEnemies++;
-            //enemiesList.Add(clone);
             
         }
 
@@ -97,15 +125,26 @@ public class BossBattle : MonoBehaviour
             StartCoroutine(Vulnerable());
         }
         
-        
     }
 
     //Phase 2
     private void Phase2()
     {
-        deathWall1.SetActive(true);
-        deathWall2.SetActive(true);
 
+        if (Time.time > spawnCooldown)
+        {
+            int randomSpawner = Random.Range(0, spawners.Length);
+            int randomEnemy = Random.Range(0, enemies.Length);
+        
+        
+            Instantiate(enemies[randomEnemy], spawners[randomSpawner].transform.position, Quaternion.identity);
+        
+            spawnCooldown = Time.time + spawnCooldown;
+            //activeEnemies++;
+            //enemiesList.Add(clone);
+            
+        }
+        
         if (Time.time > bulletCooldown)
         {
             StartCoroutine(Shoot());
@@ -122,7 +161,11 @@ public class BossBattle : MonoBehaviour
     {
         
         fleshWall.SetActive(false);
-        
+
+        if (_bossHeart.currentBossHealth <= 0)
+        {
+            yield return new WaitForSeconds(100f);
+        }
         
         yield return new WaitForSeconds(vulnerableTime);
         fleshWall.SetActive(true);
@@ -146,5 +189,6 @@ public class BossBattle : MonoBehaviour
         
     }
 
+    
 
 }

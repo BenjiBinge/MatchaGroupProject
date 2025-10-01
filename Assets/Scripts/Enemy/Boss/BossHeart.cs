@@ -54,8 +54,33 @@ public class BossHeart : MonoBehaviour
             //Destroys enemy on death
             if (currentBossHealth <= 0)
             {
-                Destroy(gameObject);
+                StartCoroutine(Death());
             }
         }
+    }
+
+    private IEnumerator Death()
+    {
+        BloodFX.Play();
+        _animator.Play("HeartDamaged");
+        yield return new WaitForSeconds(2f);
+        BloodFX.Play();
+        _animator.Play("HeartDamaged");
+        yield return new WaitForSeconds(2f);
+        BloodFX.Play();
+        _animator.Play("HeartDamaged");
+        
+        yield return new WaitForSeconds(1f);
+        BloodFX.Play();
+        _animator.Play("HeartDamaged");
+        yield return new WaitForSeconds(0.1f);
+        BloodFX.Play();
+        _animator.Play("HeartDamaged");
+        yield return new WaitForSeconds(0.1f);
+        BloodFX.Play();
+        _animator.Play("HeartDamaged");
+        
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
     }
 }

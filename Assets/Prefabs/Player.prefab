@@ -416,7 +416,7 @@ MonoBehaviour:
   chargeSpeed: 20
   moveDirection: 0
   playerHealth: 3
-  damageCooldown: 3
+  damageCooldown: 2
   isKnockbacked: 0
   isAttacking: 0
   isChargeAttacking: 0
