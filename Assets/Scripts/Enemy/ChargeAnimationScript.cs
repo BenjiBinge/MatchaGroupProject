@@ -1,11 +1,9 @@
 using UnityEngine;
 
-public class PlayerAnimationScript : MonoBehaviour
+public class ChargeAnimationScript : MonoBehaviour
 {
-    [SerializeField] private float attackAnimTime;
-    [SerializeField] private float attack2AnimTime;
+    [SerializeField] private float castAnimTime;
     [SerializeField] private float damageAnimTime;
-    
 
     private float _lockedTill;
 
@@ -22,24 +20,23 @@ public class PlayerAnimationScript : MonoBehaviour
         }
     }
     
-    public void UpdateAnimation(bool followPlayer, bool attack, bool attack2, bool takeDamage)
+    public void UpdateAnimation(bool followPlayer, bool charging, bool takeDamage)
     {
-        var nextAnimation = GetAnimation(followPlayer, attack, attack2, takeDamage);
+        var nextAnimation = GetAnimation(followPlayer, charging, takeDamage);
 
         if (nextAnimation == _currentAnimation) return;
         _animator.CrossFade(nextAnimation, 0, 0);
         _currentAnimation = nextAnimation;
     }
 
-    private int GetAnimation(bool walk, bool attacking,bool attacking2, bool takeDamage)
+    private int GetAnimation(bool followPlayer, bool charging, bool takeDamage)
     {
         if (Time.time < _lockedTill) return _currentAnimation;
         
         if (takeDamage) return LockAnimation(Damage, damageAnimTime);
-        if (attacking) return LockAnimation(Attack, attackAnimTime);
-        if (attacking2) return LockAnimation(Attack, attack2AnimTime);
+        if (charging) return LockAnimation(Charge, castAnimTime);
         //return direction != Vector2.zero ? Walk : Idle;
-        return walk ? Walk : Idle;
+        return followPlayer ? Walk : Idle;
        
         /*  if (followPlayer)
          {
@@ -63,8 +60,5 @@ public class PlayerAnimationScript : MonoBehaviour
     private static readonly int Idle = Animator.StringToHash("Idle");
     private static readonly int Walk = Animator.StringToHash("Walk");
     private static readonly int Damage = Animator.StringToHash("Damaged");
-    private static readonly int Attack = Animator.StringToHash("AttackSlash");
-    private static readonly int Attack2 = Animator.StringToHash("AttackCharge");
-
-    
+    private static readonly int Charge = Animator.StringToHash("Charge");
 }

@@ -38,6 +38,8 @@ public class ChargeEnemy : MonoBehaviour
     
     private PlayerController _player;
     [SerializeField] private LayerMask whatIsPlayer;
+    
+    private ChargeAnimationScript _animation;
 
     private void Start()
     {
@@ -48,6 +50,7 @@ public class ChargeEnemy : MonoBehaviour
         
         target = GameObject.Find("Player").transform;
         _colliders = gameObject.GetComponents<Collider2D>();
+        _animation = GetComponent<ChargeAnimationScript>();
     }
 
     private void Update()
@@ -64,6 +67,7 @@ public class ChargeEnemy : MonoBehaviour
             _Y = new Vector2(0, Mathf.Sign(direction.y) * moveSpeed);
         }
         
+        _animation.UpdateAnimation(canChase, canDash, isDamaged);
         
         //Sets if the rangeEnemy can chase the player or not
         if (Vector2.Distance(target.position, transform.position) < chaseRange && !isDashing)
@@ -116,6 +120,8 @@ public class ChargeEnemy : MonoBehaviour
          _rigidbody.linearVelocity = direction;
          var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
          RotationPoint.rotation = Quaternion.Euler(0, 0, angle);
+         
+         _animation.UpdateMoveDirection(direction);
      }
 
      private void SetDirectionDistance()
