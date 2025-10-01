@@ -7,6 +7,7 @@ public class MainMenuController : MonoBehaviour
 {
 
     public GameObject OptionsScreen;
+    public GameObject CreditsScreen;
     
     public void StartGame()
     {
@@ -27,10 +28,22 @@ public class MainMenuController : MonoBehaviour
     {
         OptionsScreen.SetActive(false);
     }
+
+    public void CreditsOpen()
+    {
+        CreditsScreen.SetActive(true);
+    }
+
+    public void CreditsClose()
+    {
+        CreditsScreen.SetActive(false);
+        OptionsScreen.SetActive(false);
+    }
+    
     private void Start()
     {
-        
         OptionsScreen.SetActive(false);
+        CreditsScreen.SetActive(false);
     }
 
     private void Update()
