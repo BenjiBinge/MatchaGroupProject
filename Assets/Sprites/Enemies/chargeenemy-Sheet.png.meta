@@ -1,0 +1,1172 @@
+fileFormatVersion: 2
+guid: f7004efd779439348979314f1649d20a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6114590876671832006
+    second: chargeenemy-Sheet_0
+  - first:
+      213: 4297944061768031911
+    second: chargeenemy-Sheet_1
+  - first:
+      213: 6501859284916669992
+    second: chargeenemy-Sheet_2
+  - first:
+      213: -810449641253388990
+    second: chargeenemy-Sheet_3
+  - first:
+      213: 3556319562408284152
+    second: chargeenemy-Sheet_4
+  - first:
+      213: -6223904916327618521
+    second: chargeenemy-Sheet_5
+  - first:
+      213: -5853812207937507090
+    second: chargeenemy-Sheet_6
+  - first:
+      213: -1540853968935714311
+    second: chargeenemy-Sheet_7
+  - first:
+      213: -4460762387255471480
+    second: chargeenemy-Sheet_8
+  - first:
+      213: -9210119844437306027
+    second: chargeenemy-Sheet_9
+  - first:
+      213: 7284300581775770229
+    second: chargeenemy-Sheet_10
+  - first:
+      213: -6678187690121791857
+    second: chargeenemy-Sheet_11
+  - first:
+      213: -112730891605483333
+    second: chargeenemy-Sheet_12
+  - first:
+      213: -7507196657431161829
+    second: chargeenemy-Sheet_13
+  - first:
+      213: -1458849722555903574
+    second: chargeenemy-Sheet_14
+  - first:
+      213: 6764597191826239902
+    second: chargeenemy-Sheet_15
+  - first:
+      213: 4285491342655729718
+    second: chargeenemy-Sheet_16
+  - first:
+      213: -249670701142045666
+    second: chargeenemy-Sheet_17
+  - first:
+      213: 5895786093182412563
+    second: chargeenemy-Sheet_18
+  - first:
+      213: -1226250054765572070
+    second: chargeenemy-Sheet_19
+  - first:
+      213: -2229585643142277954
+    second: chargeenemy-Sheet_20
+  - first:
+      213: 4030516193498908047
+    second: chargeenemy-Sheet_21
+  - first:
+      213: 9081333865621563814
+    second: chargeenemy-Sheet_22
+  - first:
+      213: 5052065638688203408
+    second: chargeenemy-Sheet_23
+  - first:
+      213: -470907184873870806
+    second: chargeenemy-Sheet_24
+  - first:
+      213: 5101147380988669721
+    second: chargeenemy-Sheet_25
+  - first:
+      213: -3302808798819063646
+    second: chargeenemy-Sheet_26
+  - first:
+      213: 4768181855305081323
+    second: chargeenemy-Sheet_27
+  - first:
+      213: -8028309361207624005
+    second: chargeenemy-Sheet_28
+  - first:
+      213: -2491576389044033276
+    second: chargeenemy-Sheet_29
+  - first:
+      213: 1535115112185238208
+    second: chargeenemy-Sheet_30
+  - first:
+      213: 3601726791042536451
+    second: chargeenemy-Sheet_31
+  - first:
+      213: -6206031806284004529
+    second: chargeenemy-Sheet_32
+  - first:
+      213: 6605406468866460671
+    second: chargeenemy-Sheet_33
+  - first:
+      213: 1820432736275196280
+    second: chargeenemy-Sheet_34
+  - first:
+      213: -4115827457873564835
+    second: chargeenemy-Sheet_35
+  - first:
+      213: -1311455527114970451
+    second: chargeenemy-Sheet_36
+  - first:
+      213: 6332626084462531536
+    second: chargeenemy-Sheet_37
+  - first:
+      213: -8655388418749438510
+    second: chargeenemy-Sheet_38
+  - first:
+      213: -4130864117156963852
+    second: chargeenemy-Sheet_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3091218efb942ba0800000000000000
+      internalID: -6114590876671832006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aede2a4a5d55ab30800000000000000
+      internalID: 4297944061768031911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e8801429e3b3a50800000000000000
+      internalID: 6501859284916669992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24dbfb06854b0c4f0800000000000000
+      internalID: -810449641253388990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ff4e11ccc59a5130800000000000000
+      internalID: 3556319562408284152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7282c7a447f30a9a0800000000000000
+      internalID: -6223904916327618521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee03a0ccfc413cea0800000000000000
+      internalID: -5853812207937507090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f106d2aa79cd9ae0800000000000000
+      internalID: -1540853968935714311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 882d6303e303812c0800000000000000
+      internalID: -4460762387255471480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 555d98d7cc41f2080800000000000000
+      internalID: -9210119844437306027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5728ae509c8071560800000000000000
+      internalID: 7284300581775770229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8677eaadaf4253a0800000000000000
+      internalID: -6678187690121791857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb064a2f9df7f6ef0800000000000000
+      internalID: -112730891605483333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b14d0d63a6411d790800000000000000
+      internalID: -7507196657431161829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa1d06a18ef11cbe0800000000000000
+      internalID: -1458849722555903574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e91786b3e4da0ed50800000000000000
+      internalID: 6764597191826239902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 630b10fabaf197b30800000000000000
+      internalID: 4285491342655729718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1c0b93f1ddf88cf0800000000000000
+      internalID: -249670701142045666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31763dbe63a02d150800000000000000
+      internalID: 5895786093182412563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1015e7721c7bfee0800000000000000
+      internalID: -1226250054765572070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb49130ababee01e0800000000000000
+      internalID: -2229585643142277954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8546f69f154fe730800000000000000
+      internalID: 4030516193498908047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a9291b2901670e70800000000000000
+      internalID: 9081333865621563814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 092a7ff6eea8c1640800000000000000
+      internalID: 5052065638688203408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2ae96b09600779f0800000000000000
+      internalID: -470907184873870806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91f6eb6148aeac640800000000000000
+      internalID: 5101147380988669721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a8ea5185e01a22d0800000000000000
+      internalID: -3302808798819063646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be12ced622cfb2240800000000000000
+      internalID: 4768181855305081323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbeb64afb27b59090800000000000000
+      internalID: -8028309361207624005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 409a740a9742c6dd0800000000000000
+      internalID: -2491576389044033276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c29227af03dd4510800000000000000
+      internalID: 1535115112185238208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30419160f67ebf130800000000000000
+      internalID: 3601726791042536451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f438aa104febfd9a0800000000000000
+      internalID: -6206031806284004529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffb4addbf2e1bab50800000000000000
+      internalID: 6605406468866460671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 879ec27bde9734910800000000000000
+      internalID: 1820432736275196280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5ba5a0dbb4a1e6c0800000000000000
+      internalID: -4115827457873564835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daae69f7526cccde0800000000000000
+      internalID: -1311455527114970451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d313c34fd102e750800000000000000
+      internalID: 6332626084462531536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d5e8636712e1e780800000000000000
+      internalID: -8655388418749438510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chargeenemy-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 0
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f99371c8f83ca6c0800000000000000
+      internalID: -4130864117156963852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8962aadbc89521b4f85997a2e27db3f6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":40.0,"y":1.0},"gridSpriteSize":{"x":38.0,"y":38.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      chargeenemy-Sheet_0: -6114590876671832006
+      chargeenemy-Sheet_1: 4297944061768031911
+      chargeenemy-Sheet_10: 7284300581775770229
+      chargeenemy-Sheet_11: -6678187690121791857
+      chargeenemy-Sheet_12: -112730891605483333
+      chargeenemy-Sheet_13: -7507196657431161829
+      chargeenemy-Sheet_14: -1458849722555903574
+      chargeenemy-Sheet_15: 6764597191826239902
+      chargeenemy-Sheet_16: 4285491342655729718
+      chargeenemy-Sheet_17: -249670701142045666
+      chargeenemy-Sheet_18: 5895786093182412563
+      chargeenemy-Sheet_19: -1226250054765572070
+      chargeenemy-Sheet_2: 6501859284916669992
+      chargeenemy-Sheet_20: -2229585643142277954
+      chargeenemy-Sheet_21: 4030516193498908047
+      chargeenemy-Sheet_22: 9081333865621563814
+      chargeenemy-Sheet_23: 5052065638688203408
+      chargeenemy-Sheet_24: -470907184873870806
+      chargeenemy-Sheet_25: 5101147380988669721
+      chargeenemy-Sheet_26: -3302808798819063646
+      chargeenemy-Sheet_27: 4768181855305081323
+      chargeenemy-Sheet_28: -8028309361207624005
+      chargeenemy-Sheet_29: -2491576389044033276
+      chargeenemy-Sheet_3: -810449641253388990
+      chargeenemy-Sheet_30: 1535115112185238208
+      chargeenemy-Sheet_31: 3601726791042536451
+      chargeenemy-Sheet_32: -6206031806284004529
+      chargeenemy-Sheet_33: 6605406468866460671
+      chargeenemy-Sheet_34: 1820432736275196280
+      chargeenemy-Sheet_35: -4115827457873564835
+      chargeenemy-Sheet_36: -1311455527114970451
+      chargeenemy-Sheet_37: 6332626084462531536
+      chargeenemy-Sheet_38: -8655388418749438510
+      chargeenemy-Sheet_39: -4130864117156963852
+      chargeenemy-Sheet_4: 3556319562408284152
+      chargeenemy-Sheet_5: -6223904916327618521
+      chargeenemy-Sheet_6: -5853812207937507090
+      chargeenemy-Sheet_7: -1540853968935714311
+      chargeenemy-Sheet_8: -4460762387255471480
+      chargeenemy-Sheet_9: -9210119844437306027
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
