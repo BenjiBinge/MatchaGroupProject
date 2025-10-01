@@ -107,7 +107,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1848132136608576765, guid: 893e5dc635e720447b6144b26af50c9b, type: 3}
       propertyPath: currentBossHealth
-      value: 1
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1978401754143697500, guid: 893e5dc635e720447b6144b26af50c9b, type: 3}
       propertyPath: m_Name

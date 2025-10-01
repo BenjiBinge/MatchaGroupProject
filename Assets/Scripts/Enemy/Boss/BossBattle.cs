@@ -42,6 +42,7 @@ public class BossBattle : MonoBehaviour
     public GameObject HealItem;
     private float _healCooldown = 10f;
     public Transform healSpawn;
+    private PlayerController _player;
 
 
 
@@ -49,6 +50,7 @@ public class BossBattle : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         _bossHeart = GetComponentInChildren<BossHeart>();
+        _player = FindFirstObjectByType<PlayerController>();
 
         _follow = FindFirstObjectByType<FollowEnemy>();
         _range = FindFirstObjectByType<RangeEnemy>();
@@ -90,7 +92,7 @@ public class BossBattle : MonoBehaviour
             Phase2();
         }
 
-        if (Time.time > _healCooldown)
+        if (Time.time > _healCooldown && _player.playerHealth < 3)
         {
             Instantiate(HealItem, healSpawn.position, Quaternion.identity);
             _healCooldown = Time.time + 10f;
