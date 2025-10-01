@@ -24,7 +24,7 @@ public class ChargeEnemy : MonoBehaviour
     public bool isDashing;
     //public float dashRange;
     public bool canDash;
-    //[SerializeField] private float dashCooldown;
+    private float _dashCooldown = 3f;
     
     //Damage
     private float _damageCooldownTimer = 1f;
@@ -58,17 +58,20 @@ public class ChargeEnemy : MonoBehaviour
             SetDirectionDistance();
         }
 
-        _X = new Vector2(Mathf.Sign(direction.x) * moveSpeed, 0);
-        _Y = new Vector2(0, Mathf.Sign(direction.y) * moveSpeed);
-
-
+        if (!isDamaged && !isDashing)
+        {
+            _X = new Vector2(Mathf.Sign(direction.x) * moveSpeed, 0);
+            _Y = new Vector2(0, Mathf.Sign(direction.y) * moveSpeed);
+        }
+        
+        
         //Sets if the rangeEnemy can chase the player or not
-        if (Vector2.Distance(target.position, transform.position) < chaseRange)
+        if (Vector2.Distance(target.position, transform.position) < chaseRange && !isDashing)
         {
             canChase = true;
         }
 
-        if (Vector2.Distance(target.position, transform.position) > chaseRange)
+        if (Vector2.Distance(target.position, transform.position) > chaseRange && !isDashing)
         {
             canChase = false;
             _rigidbody.linearVelocityX = 0;
@@ -77,18 +80,28 @@ public class ChargeEnemy : MonoBehaviour
 
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
         {
-            SetDirection(_X);
+
+            if (!isDashing)
+            {
+                SetDirection(_X);
+            }
             if (canDash && !isDashing)
             {
+                
                 StartCoroutine(Dash(_X));
             }
         }
 
         if (Mathf.Abs(direction.x) < Mathf.Abs(direction.y))
         {
-            SetDirection(_Y);
+
+            if (!isDashing)
+            {
+                SetDirection(_Y);
+            }
             if (canDash && !isDashing)
             {
+                
                 StartCoroutine(Dash(_Y));
             }
 
@@ -125,7 +138,7 @@ public class ChargeEnemy : MonoBehaviour
      //When player is inside line of sight
      private void OnTriggerEnter2D(Collider2D other)
      {
-         if (other.gameObject.CompareTag("Player"))
+         if (other.gameObject.CompareTag("Player") && Time.time > _dashCooldown)
          {
              canDash = true;
          }
@@ -145,7 +158,6 @@ public class ChargeEnemy : MonoBehaviour
          if (other.gameObject.CompareTag("Player"))
          {
              canDash = false;
-             
          }
      }
     
@@ -162,7 +174,7 @@ public class ChargeEnemy : MonoBehaviour
              yield return new WaitForSeconds(1f);
              isDamaged = false;
 
-             if (enemyHealth <= 0) ;
+             if (enemyHealth <= 0)
              {
                  Destroy (gameObject);
              }
@@ -173,12 +185,11 @@ public class ChargeEnemy : MonoBehaviour
      private IEnumerator Dash(Vector2 direction)
      {
          isDashing = true;
-         _rigidbody.linearVelocity += direction * dashSpeed;
-         
+         _rigidbody.linearVelocity = direction * dashSpeed;
+         canDash = false;
          yield return new WaitForSeconds(1f);
+         _dashCooldown = Time.time + 2f;
          isDashing = false;
-         
-         yield return new WaitForSeconds(2f);
          
          /*yield return new WaitForSeconds(2f);
          
