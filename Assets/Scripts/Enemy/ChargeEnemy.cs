@@ -145,7 +145,7 @@ public class ChargeEnemy : MonoBehaviour
          if (other.gameObject.CompareTag("Player"))
          {
              canDash = false;
-             StartCoroutine(Dash(_X));
+             
          }
      }
     
@@ -173,7 +173,7 @@ public class ChargeEnemy : MonoBehaviour
      private IEnumerator Dash(Vector2 direction)
      {
          isDashing = true;
-         _rigidbody.linearVelocity = direction * dashSpeed;
+         _rigidbody.linearVelocity += direction * dashSpeed;
          
          yield return new WaitForSeconds(1f);
          isDashing = false;
