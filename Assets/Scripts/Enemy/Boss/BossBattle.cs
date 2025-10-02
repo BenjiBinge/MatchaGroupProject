@@ -1,8 +1,6 @@
-using System;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using Random = UnityEngine.Random;
 
 public class BossBattle : MonoBehaviour
 {
@@ -47,19 +45,6 @@ public class BossBattle : MonoBehaviour
     private PlayerController _player;
 
     public Animator fleshAnimator;
-    
-    public AudioSource phase1Music;
-    public AudioSource phase2Music;
-    public AudioSource fleshNoise;
-    public AudioSource heartBeat;
-    public AudioSource fastHeartBeat;
-
-    public AudioClip fleshNoises;
-
-    public void Awake()
-    {
-        phase1Music.Play();
-    }
 
 
     private void Start()
@@ -73,8 +58,6 @@ public class BossBattle : MonoBehaviour
         _charge = FindFirstObjectByType<ChargeEnemy>();
         
         Phase1Active = true;
-        phase1Music.Play();
-       
 
         /*_follow.chaseRange = 50f;
         _follow.enemyHealth = 1f;
@@ -95,7 +78,6 @@ public class BossBattle : MonoBehaviour
         {
             Phase1Active = true;
             Phase2Active = false;
-            
         }
 
         if (_bossHeart.currentBossHealth < _bossHeart.maxBossHealth / 2)
@@ -108,14 +90,13 @@ public class BossBattle : MonoBehaviour
         if (Phase1Active)
         {
             Phase1();
-            
         }
         if (Phase2Active)
         {
             Phase2();
         }
 
-        if (Time.time > _healCooldown && _player.playerHealth < 2)
+        if (Time.time > _healCooldown && _player.playerHealth < 3)
         {
             Instantiate(HealItem, healSpawn.position, Quaternion.identity);
             _healCooldown = Time.time + 10f;
@@ -126,7 +107,6 @@ public class BossBattle : MonoBehaviour
             Destroy(fleshWall);
             Phase1Active =  false;
         }
-
         
     }
     
@@ -137,8 +117,6 @@ public class BossBattle : MonoBehaviour
         {
             int randomSpawner = Random.Range(0, spawners.Length);
             int randomEnemy = Random.Range(0, enemies.Length);
-            
-            
         
         
             Instantiate(enemies[randomEnemy], spawners[randomSpawner].transform.position, Quaternion.identity);
@@ -162,7 +140,7 @@ public class BossBattle : MonoBehaviour
         {
             int randomSpawner = Random.Range(0, spawners.Length);
             int randomEnemy = Random.Range(0, enemies.Length);
-            
+        
         
             Instantiate(enemies[randomEnemy], spawners[randomSpawner].transform.position, Quaternion.identity);
         
@@ -185,8 +163,6 @@ public class BossBattle : MonoBehaviour
     private IEnumerator Vulnerable()
     {
         fleshAnimator.Play("FleshWallOpen");
-
-        fleshNoise.PlayOneShot(fleshNoises);
         
         yield return new WaitForSeconds(1f);
         fleshWall.SetActive(false);
