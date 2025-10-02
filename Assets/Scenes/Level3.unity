@@ -544,12 +544,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 15982175}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
->>>>>>> parent of 108c3b5 (music i guess)
 --- !u!1 &398787515
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,86 +623,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
---- !u!1001 &398787515
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5673377998677217133, guid: 15d5cfaddca3c1a4bb6f08d5c657eeae, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.24443
-      objectReference: {fileID: 0}
-    - target: {fileID: 5673377998677217133, guid: 15d5cfaddca3c1a4bb6f08d5c657eeae, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.34958
-      objectReference: {fileID: 0}
-    - target: {fileID: 5673377998677217133, guid: 15d5cfaddca3c1a4bb6f08d5c657eeae, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5673377998677217133, guid: 15d5cfaddca3c1a4bb6f08d5c657eeae, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5673377998677217133, guid: 15d5cfaddca3c1a4bb6f08d5c657eeae, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5673377998677217133, guid: 15d5cfaddca3c1a4bb6f08d5c657eeae, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5673377998677217133, guid: 15d5cfaddca3c1a4bb6f08d5c657eeae, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5673377998677217133, guid: 15d5cfaddca3c1a4bb6f08d5c657eeae, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5673377998677217133, guid: 15d5cfaddca3c1a4bb6f08d5c657eeae, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5673377998677217133, guid: 15d5cfaddca3c1a4bb6f08d5c657eeae, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7561816964380927203, guid: 15d5cfaddca3c1a4bb6f08d5c657eeae, type: 3}
-      propertyPath: m_Name
-      value: phase 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8102116120975280382, guid: 15d5cfaddca3c1a4bb6f08d5c657eeae, type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8102116120975280382, guid: 15d5cfaddca3c1a4bb6f08d5c657eeae, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 15d5cfaddca3c1a4bb6f08d5c657eeae, type: 3}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> parent of 108c3b5 (music i guess)
 --- !u!1 &407632180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,6 +1439,37 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 890888439}
   m_SourcePrefab: {fileID: 100100000, guid: 2ded6b40d19905c438f3112751557c0f, type: 3}
+--- !u!1 &604887526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 604887527}
+  m_Layer: 0
+  m_Name: EliasIsAss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &604887527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604887526}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.69662, y: 2.43943, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &632060092
 GameObject:
   m_ObjectHideFlags: 0
@@ -5044,12 +4989,6 @@ Transform:
   - {fileID: 928431315}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
->>>>>>> parent of 108c3b5 (music i guess)
 --- !u!1 &1653726870
 GameObject:
   m_ObjectHideFlags: 0
@@ -5152,86 +5091,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
---- !u!1001 &1653726870
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4985130293102976216, guid: 62c70c82120a75a4480c606f819a1c44, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.24443
-      objectReference: {fileID: 0}
-    - target: {fileID: 4985130293102976216, guid: 62c70c82120a75a4480c606f819a1c44, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.34958
-      objectReference: {fileID: 0}
-    - target: {fileID: 4985130293102976216, guid: 62c70c82120a75a4480c606f819a1c44, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4985130293102976216, guid: 62c70c82120a75a4480c606f819a1c44, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4985130293102976216, guid: 62c70c82120a75a4480c606f819a1c44, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4985130293102976216, guid: 62c70c82120a75a4480c606f819a1c44, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4985130293102976216, guid: 62c70c82120a75a4480c606f819a1c44, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4985130293102976216, guid: 62c70c82120a75a4480c606f819a1c44, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4985130293102976216, guid: 62c70c82120a75a4480c606f819a1c44, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4985130293102976216, guid: 62c70c82120a75a4480c606f819a1c44, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5420749535461248048, guid: 62c70c82120a75a4480c606f819a1c44, type: 3}
-      propertyPath: m_Name
-      value: phase 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630991895290257715, guid: 62c70c82120a75a4480c606f819a1c44, type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5630991895290257715, guid: 62c70c82120a75a4480c606f819a1c44, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 62c70c82120a75a4480c606f819a1c44, type: 3}
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> parent of 108c3b5 (music i guess)
 --- !u!1 &1671505072
 GameObject:
   m_ObjectHideFlags: 0
@@ -7346,28 +7205,6 @@ SceneRoots:
   - {fileID: 581108330}
   - {fileID: 1335143180}
   - {fileID: 711503324}
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
   - {fileID: 1653726874}
   - {fileID: 398787518}
-=======
-  - {fileID: 1653726870}
-  - {fileID: 398787515}
-  - {fileID: 1987279855}
->>>>>>> Stashed changes
-=======
-  - {fileID: 1653726870}
-  - {fileID: 398787515}
-  - {fileID: 1987279855}
->>>>>>> Stashed changes
-=======
-  - {fileID: 1653726870}
-  - {fileID: 398787515}
-  - {fileID: 1987279855}
->>>>>>> Stashed changes
-=======
-  - {fileID: 1653726874}
-  - {fileID: 398787518}
->>>>>>> parent of 108c3b5 (music i guess)
+  - {fileID: 604887527}
