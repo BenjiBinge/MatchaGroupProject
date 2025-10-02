@@ -14,6 +14,16 @@ public class MainMenuController : MonoBehaviour
         SceneManager.LoadScene("Level1");
     }
 
+    public void Skip1()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+
+    public void skip2()
+    {
+        SceneManager.LoadScene("Level3");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
