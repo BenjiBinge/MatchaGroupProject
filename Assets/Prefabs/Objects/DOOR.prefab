@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 50
-  m_Sprite: {fileID: 8831818901174242574, guid: 2580a3ac351cc924ba83484bf48e80b3, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &7312141552121858636
@@ -150,6 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ca17917982d0746915c15c27cb2db6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  notOpened: {fileID: 8831818901174242574, guid: 2580a3ac351cc924ba83484bf48e80b3, type: 3}
-  Opened: {fileID: 9093894635992157186, guid: 2580a3ac351cc924ba83484bf48e80b3, type: 3}
+  notOpened: {fileID: 0}
+  Opened: {fileID: 0}
   doorSprite: {fileID: 71051546117019127}
