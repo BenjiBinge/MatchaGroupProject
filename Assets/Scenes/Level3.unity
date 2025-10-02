@@ -5238,7 +5238,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Destroy the Heart?
+  m_text: Destroy the Heart
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cbd2f79b18859c542a326fda51554928, type: 2}
   m_sharedMaterial: {fileID: -5329682449193315876, guid: cbd2f79b18859c542a326fda51554928, type: 2}

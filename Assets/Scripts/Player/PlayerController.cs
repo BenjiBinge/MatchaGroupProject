@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
       _animator.UpdateAnimation(isAttacking,isChargeAttacking,isKnockbacked);
       
 
-         //Changes the player direction based on input
+      //Changes the player direction based on input
       if (_input.Horizontal != 0 && !isAttacking && !isChargeAttacking)
       {
          transform.localScale = new Vector2(Mathf.Sign(_input.Horizontal), 1f);

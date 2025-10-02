@@ -210,7 +210,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RangeEnemy
   enemyHealth: 2
   walkSound: {fileID: 0}
-  castSound: {fileID: 0}
   moveSpeed: 1
   direction: {x: 0, y: 0}
   target: {fileID: 0}
@@ -379,7 +378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8109255867131059430
 Transform:
   m_ObjectHideFlags: 0
