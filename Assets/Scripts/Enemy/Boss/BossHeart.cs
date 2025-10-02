@@ -1,12 +1,15 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class BossHeart : MonoBehaviour
 {
     //Health related
     public float currentBossHealth;
     public float maxBossHealth = 30f;
+    public bool isDead;
+    public TextMeshPro isDeadText;
     
     public AudioSource heartSound;
     public AudioSource dmgSound;
@@ -22,7 +25,7 @@ public class BossHeart : MonoBehaviour
     public float vulnerablTime = 8f;
     
     private PlayerController _player;
-    public bool isDead;
+    
 
     private void Start()
     {
@@ -42,7 +45,9 @@ public class BossHeart : MonoBehaviour
 
         if (isDead)
         {
-            
+            isDeadText.text = "Destroy The Heart?";
+            StartCoroutine(Ending());
+
         }
         
         
@@ -93,25 +98,43 @@ public class BossHeart : MonoBehaviour
     private IEnumerator Death()
     {
         BloodFX.Play();
+        dmgSound.Play();
         _animator.Play("HeartDamaged");
         yield return new WaitForSeconds(2f);
         BloodFX.Play();
+        dmgSound.Play();
         _animator.Play("HeartDamaged");
         yield return new WaitForSeconds(2f);
         BloodFX.Play();
+        dmgSound.Play();
         _animator.Play("HeartDamaged");
         
         yield return new WaitForSeconds(1f);
         BloodFX.Play();
+        dmgSound.Play();
         _animator.Play("HeartDamaged");
         yield return new WaitForSeconds(0.1f);
         BloodFX.Play();
+        dmgSound.Play();
         _animator.Play("HeartDamaged");
         yield return new WaitForSeconds(0.1f);
         BloodFX.Play();
+        dmgSound.Play();
         _animator.Play("HeartDamaged");
         
         yield return new WaitForSeconds(1f);
         isDead = true;
     }
+
+    private IEnumerator Ending()
+    {
+        if (isDamaged && isDead)
+        {
+            //Play bad end cutscene
+        }
+        yield return new WaitForSeconds(5f);
+        
+        //Play good end cutscene
+    }
+    
 }

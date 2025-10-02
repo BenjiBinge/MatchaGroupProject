@@ -5238,7 +5238,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Destroy the Heart
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cbd2f79b18859c542a326fda51554928, type: 2}
   m_sharedMaterial: {fileID: -5329682449193315876, guid: cbd2f79b18859c542a326fda51554928, type: 2}
@@ -6896,7 +6896,7 @@ Transform:
   m_GameObject: {fileID: 2107637851}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.9, y: -1.9028299, z: 0}
+  m_LocalPosition: {x: -9.57, y: -1.9028299, z: 0}
   m_LocalScale: {x: 15, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
