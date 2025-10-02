@@ -289,6 +289,7 @@ GameObject:
   - component: {fileID: 1149189552979807547}
   - component: {fileID: 1319977359313238695}
   - component: {fileID: -1009832927255718269}
+  - component: {fileID: 5480528050242221253}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -362,7 +363,7 @@ SpriteRenderer:
   m_SortingOrder: 100
   m_Sprite: {fileID: -2190202930755244392, guid: 5af4f7a3077938142b248a4ef8e0a0ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -472,8 +473,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.1578412, y: 0.03367269}
-  m_Size: {x: 0.48330784, y: 1.3964365}
+  m_Offset: {x: 0.026365161, y: -0.13901138}
+  m_Size: {x: 0.87000203, y: 1.1541862}
   m_Direction: 0
 --- !u!95 &-1009832927255718269
 Animator:
@@ -497,3 +498,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5480528050242221253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7513568592398218817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b5ff7b346d89ca4daa7000ae61aae27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  attackAnimTime: 0
+  attack2AnimTime: 0
+  damageAnimTime: 0
