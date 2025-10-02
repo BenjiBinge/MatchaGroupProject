@@ -64,7 +64,7 @@ public class DialogueScript: MonoBehaviour
 
         if (i == chars.Length)
         {
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(2f);
             isFinished = true;
         }
     }

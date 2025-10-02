@@ -292,13 +292,11 @@ MonoBehaviour:
   - "You may have noticed that your surroundings have become\u2026 bleaker."
   - ...
   - This realm is fading away. Your presence disturbs it.
-  - It wont survive much longer now,
-  - but, its a sacrifice thats necessary.
-  - 
+  - but, it's a sacrifice that's necessary.
   - 'Retrieve the Heart. '
   - Complete your mission.
   dialogueText: {fileID: 700101280}
-  characterPerSecond: 13
+  characterPerSecond: 20
 --- !u!114 &788087724
 MonoBehaviour:
   m_ObjectHideFlags: 0

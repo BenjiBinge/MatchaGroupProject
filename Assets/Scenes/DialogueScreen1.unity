@@ -232,14 +232,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueScript
   lines:
   - 'Well done, you will soon find the core of the dungeon. '
-  - As expected, the evil inhabitats of this world will do anything to defend it.
+  - As expected, the evil inhabitants of this world will do anything to defend it.
   - Eliminate the creatures.
-  - They are nothing but senseless beings with no instincts other than killing.
-  - ...
-  - Now, proceed with your mission.
   - Retrieve the Artifact.
   dialogueText: {fileID: 1742487870}
-  characterPerSecond: 16
+  characterPerSecond: 25
 --- !u!114 &1287408355
 MonoBehaviour:
   m_ObjectHideFlags: 0
