@@ -10,6 +10,8 @@ public class InputManager : MonoBehaviour
     public bool Attack;
     public bool ChargeAttack;
     public bool ChargeAttackRelease;
+    
+    
 
     private void Update()
     {
@@ -21,6 +23,7 @@ public class InputManager : MonoBehaviour
         ChargeAttackRelease = _inputSystem.Player.Attack.WasReleasedThisFrame();
         
     }
+
     
     private void Awake() { _inputSystem = new InputSystem_Actions(); }
     

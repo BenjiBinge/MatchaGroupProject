@@ -36,6 +36,10 @@ public class PlayerController : MonoBehaviour
    public float chargeWait = 2f;
    private float _chargeTimer = 2f;
 
+   //Checks if the player is moving
+   public bool isMoving;
+   
+   
    private SpriteRenderer _spriteRenderer;
 
    private PlayerAnimationScript _animator;
@@ -58,29 +62,43 @@ public class PlayerController : MonoBehaviour
       {
          _rigidbody.linearVelocityX = _input.Horizontal * moveSpeed;
          _rigidbody.linearVelocityY = _input.Vertical * moveSpeed;
+         
       }
+
+      
    }
 
    private void Update()
    {
+      print("WHATS HAPPENING "+isAttacking);
+      _animator.UpdateMoveDirection(_input.Horizontal, _input.Vertical);
+      
       //Keeps stock of what the last direction you moved in was ^ = -1, v = -3, < = 1, > = 3
       if (_input.Horizontal != 0 && !isAttacking && !isChargeAttacking)
       {
          moveDirection = _input.Horizontal + 2f;
+         
       }
       if (_input.Vertical != 0 && !isAttacking && !isChargeAttacking)
       {
          moveDirection = _input.Vertical - 2f;
+        
       }
-
-      //_animator.UpdateAnimation(isAttacking, isChargeAttacking,isKnockbacked, _input );
       
-      //Changes the player direction based on input
+      
+      _animator.UpdateAnimation(isAttacking,isChargeAttacking,isKnockbacked);
+      
+
+         //Changes the player direction based on input
       if (_input.Horizontal != 0 && !isAttacking && !isChargeAttacking)
       {
          transform.localScale = new Vector2(Mathf.Sign(_input.Horizontal), 1f);
-         _spriteRenderer.flipY = false;
+         _spriteRenderer.flipY = false; 
+         
+         
       }
+      
+      
       if (_input.Vertical != 0 && !isAttacking && !isChargeAttacking)
       {
          transform.localScale = new Vector2(1f, Mathf.Sign(_input.Vertical));
@@ -173,8 +191,7 @@ public class PlayerController : MonoBehaviour
          _canAttack = true;
          _invincible = false;
       }
-
-      if (moveDirection == -1 || moveDirection == -3)
+      else if (moveDirection == -1 || moveDirection == -3)
       {
          isAttacking = true;
          _canAttack = false;

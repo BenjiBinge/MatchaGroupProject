@@ -361,9 +361,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: -2190202930755244392, guid: 5af4f7a3077938142b248a4ef8e0a0ac, type: 3}
+  m_Sprite: {fileID: 6818844564672674252, guid: 1af071233171bcb4c873dbdc30246c23, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -422,6 +422,7 @@ MonoBehaviour:
   isAttacking: 0
   isChargeAttacking: 0
   chargeWait: 1
+  isMoving: 0
 --- !u!114 &1149189552979807547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,6 +511,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b5ff7b346d89ca4daa7000ae61aae27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  attackAnimTime: 0
-  attack2AnimTime: 0
-  damageAnimTime: 0
+  attackAnimTime: 0.3
+  attack2AnimTime: 1
+  damageAnimTime: 0.2
