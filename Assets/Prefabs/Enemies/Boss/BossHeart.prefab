@@ -43,7 +43,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: b66f1ed4ca7cd214d8314b738a534611, type: 3}
+  m_Resource: {fileID: 8300000, guid: a5b6687ead129c84a96f2eca8d5b6911, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -261,7 +261,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.09003949, y: -0.004352331}
+  m_Offset: {x: -0.0026512146, y: -0.016836345}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -271,7 +271,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.3928728, y: 1.9162536}
+  m_Size: {x: 1.5676494, y: 2.170928}
   m_EdgeRadius: 0
 --- !u!50 &8368122768180593748
 Rigidbody2D:
@@ -320,6 +320,7 @@ MonoBehaviour:
   isDamaged: 0
   fleshWall: {fileID: 0}
   vulnerablTime: 8
+  isDead: 0
 --- !u!95 &1480216591596215812
 Animator:
   serializedVersion: 7

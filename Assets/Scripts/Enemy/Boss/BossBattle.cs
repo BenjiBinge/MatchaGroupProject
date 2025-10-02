@@ -121,7 +121,7 @@ public class BossBattle : MonoBehaviour
         
             Instantiate(enemies[randomEnemy], spawners[randomSpawner].transform.position, Quaternion.identity);
         
-            spawnCooldown = Time.time + 5f;
+            spawnCooldown = Time.time + 9f;
             
         }
 
@@ -144,7 +144,7 @@ public class BossBattle : MonoBehaviour
         
             Instantiate(enemies[randomEnemy], spawners[randomSpawner].transform.position, Quaternion.identity);
         
-            spawnCooldown = Time.time + 3f;
+            spawnCooldown = Time.time + 9f;
             
         }
         
@@ -168,7 +168,7 @@ public class BossBattle : MonoBehaviour
         fleshWall.SetActive(false);
         
         
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(vulnerableTime);
         
         fleshAnimator.Play("FleshWallClose");
         fleshWall.SetActive(true);

@@ -22,6 +22,7 @@ public class BossHeart : MonoBehaviour
     public float vulnerablTime = 8f;
     
     private PlayerController _player;
+    public bool isDead;
 
     private void Start()
     {
@@ -36,19 +37,15 @@ public class BossHeart : MonoBehaviour
         if (!isDamaged)
         {
             _animator.Play("HeartPulse");
-            //heartSound.Play();
+            
         }
 
-        /*if (fleshWall == null && vulnerablTime > 0)
+        if (isDead)
         {
-            vulnerablTime -= 1 * Time.deltaTime;
+            
         }
-
-        if (fleshWall == null && vulnerablTime <= 0)
-        {
-            _bossBattle.fleshWall.SetActive(true);
-            vulnerablTime = 8f;
-        }*/
+        
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -115,6 +112,6 @@ public class BossHeart : MonoBehaviour
         _animator.Play("HeartDamaged");
         
         yield return new WaitForSeconds(1f);
-        Destroy(gameObject);
+        isDead = true;
     }
 }
