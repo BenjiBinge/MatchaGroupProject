@@ -44,6 +44,7 @@ public class BossBattle : MonoBehaviour
     public Transform healSpawn;
     private PlayerController _player;
 
+    public Animator fleshAnimator;
 
 
     private void Start()
@@ -149,15 +150,16 @@ public class BossBattle : MonoBehaviour
 
     private IEnumerator Vulnerable()
     {
-        _animator.Play("FleshWallOpen");
+        fleshAnimator.Play("FleshWallOpen");
         
         yield return new WaitForSeconds(1f);
-        //fleshWall.SetActive(false);
+        fleshWall.SetActive(false);
         
         
         yield return new WaitForSeconds(0.5f);
         
-        _animator.Play("FleshWallClose");
+        fleshAnimator.Play("FleshWallClose");
+        fleshWall.SetActive(true);
         vulnerableCooldown = Time.time + 20f;
         
     }

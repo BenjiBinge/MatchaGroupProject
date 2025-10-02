@@ -5,6 +5,9 @@ public class FollowEnemy : MonoBehaviour
 {
     public float enemyHealth;
     
+    public AudioClip[] soundEffects;
+    private AudioSource _dmgSound;
+    
     //Movement related
     public float moveSpeed;
     public Vector2 direction;
@@ -36,6 +39,8 @@ public class FollowEnemy : MonoBehaviour
         isDamaged = false;
         
         target = GameObject.Find("Player").transform;
+        
+        _dmgSound = GetComponent<AudioSource>();
     }
     
     private void Update()
@@ -125,6 +130,7 @@ public class FollowEnemy : MonoBehaviour
             enemyHealth--;
             _damageCooldownTimer = Time.time + 1f;
             BloodFX.Play();
+            _dmgSound.Play();
             gameObject.tag = "Untagged";
             
             yield return new WaitForSeconds(1f);

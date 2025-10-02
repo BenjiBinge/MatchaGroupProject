@@ -8,6 +8,7 @@ public class LeverManager : MonoBehaviour
    public Sprite flipped;
    public SpriteRenderer leverSprite;
    
+   public AudioSource flipSound;
    
    //"Flips" the lever
    private void OnTriggerEnter2D(Collider2D other)
@@ -15,6 +16,7 @@ public class LeverManager : MonoBehaviour
       if (other.gameObject.CompareTag("AttackHitbox"))
       {
          isFlipped = true;
+         flipSound.Play();
          leverSprite.sprite = flipped; 
          
       }

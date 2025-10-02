@@ -8,6 +8,8 @@ public class Door : MonoBehaviour
    public Sprite notOpened;
    public Sprite Opened;
    public SpriteRenderer doorSprite;
+   
+   public AudioSource doorSound;
 
    
    private void Start()
@@ -33,6 +35,7 @@ public class Door : MonoBehaviour
       else if (_leverManager.isFlipped)
       {
          doorSprite.sprite = Opened;
+         doorSound.Play();
       }
    }
 }

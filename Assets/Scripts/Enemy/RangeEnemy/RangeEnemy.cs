@@ -6,6 +6,9 @@ public class RangeEnemy : MonoBehaviour
 {
     public float enemyHealth;
     
+    private AudioSource _dmgSound;
+    public AudioSource walkSound;
+    
     //Movement related
     public float moveSpeed;
     public Vector2 direction;
@@ -44,6 +47,8 @@ public class RangeEnemy : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _player = FindFirstObjectByType<PlayerController>();
         _animation = GetComponent<RangeEnemyAnimation>();
+        
+        _dmgSound = GetComponent<AudioSource>();
         
         canShoot = false;
         isDamaged = false;
@@ -183,6 +188,7 @@ public class RangeEnemy : MonoBehaviour
         {
             isDamaged = true;
             BloodFX.Play();
+            _dmgSound.Play();
             gameObject.tag = "Untagged";
              
             yield return new WaitForSeconds(1f);
@@ -196,6 +202,7 @@ public class RangeEnemy : MonoBehaviour
             enemyHealth--;
             _damageCooldownTimer = Time.time + 1f;
             BloodFX.Play();
+            _dmgSound.Play();
             gameObject.tag = "Untagged";
             
             yield return new WaitForSeconds(1f);

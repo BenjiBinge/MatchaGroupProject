@@ -8,6 +8,9 @@ public class BossHeart : MonoBehaviour
     public float currentBossHealth;
     public float maxBossHealth = 30f;
     
+    public AudioSource heartSound;
+    public AudioSource dmgSound;
+    
     //Damage related
     private float _damageCooldownTimer = 1f;
     public ParticleSystem BloodFX;
@@ -33,6 +36,7 @@ public class BossHeart : MonoBehaviour
         if (!isDamaged)
         {
             _animator.Play("HeartPulse");
+            //heartSound.Play();
         }
 
         /*if (fleshWall == null && vulnerablTime > 0)
@@ -62,10 +66,11 @@ public class BossHeart : MonoBehaviour
         {
             isDamaged = true;
             BloodFX.Play();
+            dmgSound.Play();
+            currentBossHealth -= 2f;
              
             yield return new WaitForSeconds(1f);
-             
-            Destroy(gameObject);
+            
         }
         
         else if (Time.time > _damageCooldownTimer)
@@ -75,6 +80,7 @@ public class BossHeart : MonoBehaviour
             currentBossHealth--;
             _damageCooldownTimer = Time.time + 1f;
             BloodFX.Play();
+            dmgSound.Play();
             
             yield return new WaitForSeconds(1f);
             isDamaged = false;

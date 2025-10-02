@@ -5,7 +5,9 @@ using UnityEngine.EventSystems;
 
 public class ChargeEnemy : MonoBehaviour
 {
-
+    private AudioSource _dmgsound;
+    public AudioSource chargeSound;
+    
     public float enemyHealth;
     public GameObject LineOfSight;
     private Collider2D[] _colliders;
@@ -51,6 +53,8 @@ public class ChargeEnemy : MonoBehaviour
         target = GameObject.Find("Player").transform;
         _colliders = gameObject.GetComponents<Collider2D>();
         _animation = GetComponent<ChargeAnimationScript>();
+        
+        _dmgsound = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -165,6 +169,7 @@ public class ChargeEnemy : MonoBehaviour
          {
              isDamaged = true;
              BloodFX.Play();
+             _dmgsound.Play();
              gameObject.tag = "Untagged";
              
              yield return new WaitForSeconds(1f);
@@ -178,6 +183,7 @@ public class ChargeEnemy : MonoBehaviour
              enemyHealth--;
              _damageCooldownTimer = Time.time + 1f;
              BloodFX.Play();
+             _dmgsound.Play();
              gameObject.tag = "Untagged";
              
              yield return new WaitForSeconds(1f);
@@ -197,6 +203,7 @@ public class ChargeEnemy : MonoBehaviour
          isDashing = true;
          _rigidbody.linearVelocity = direction * dashSpeed;
          canDash = false;
+         chargeSound.Play();
          yield return new WaitForSeconds(1f);
          _dashCooldown = Time.time + 2f;
          isDashing = false;
