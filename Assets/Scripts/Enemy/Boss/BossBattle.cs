@@ -118,7 +118,7 @@ public class BossBattle : MonoBehaviour
         
             Instantiate(enemies[randomEnemy], spawners[randomSpawner].transform.position, Quaternion.identity);
         
-            spawnCooldown = Time.time + spawnCooldown;
+            spawnCooldown = Time.time + 3f;
             
         }
 

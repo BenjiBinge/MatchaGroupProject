@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 3212398058007499589}
   - component: {fileID: 3101498946529260507}
   - component: {fileID: 1556345221618317891}
+  - component: {fileID: 4892108003721003194}
   m_Layer: 0
   m_Name: FollowEnemy
   m_TagString: Enemy
@@ -234,7 +235,7 @@ Animator:
   m_GameObject: {fileID: 742612453470649075}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1e44db2e2c640d0479658e1aedaea550, type: 2}
+  m_Controller: {fileID: 9100000, guid: 363a155c4fcca084aaffc54706f0fd1c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -246,6 +247,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4892108003721003194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742612453470649075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43bdea0532d5e749876ea2de7690cd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  damageAnimTime: 0.2
 --- !u!1001 &7816071579674029004
 PrefabInstance:
   m_ObjectHideFlags: 0
