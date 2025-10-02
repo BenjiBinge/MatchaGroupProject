@@ -15,7 +15,7 @@ public class LeverManager : MonoBehaviour
       if (other.gameObject.CompareTag("AttackHitbox"))
       {
          isFlipped = true;
-         leverSprite.sprite = flipped;
+         leverSprite.sprite = flipped; 
          
       }
    }

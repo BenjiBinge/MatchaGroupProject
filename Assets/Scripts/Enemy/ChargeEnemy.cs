@@ -165,6 +165,7 @@ public class ChargeEnemy : MonoBehaviour
          {
              isDamaged = true;
              BloodFX.Play();
+             gameObject.tag = "Untagged";
              
              yield return new WaitForSeconds(1f);
              
@@ -177,9 +178,11 @@ public class ChargeEnemy : MonoBehaviour
              enemyHealth--;
              _damageCooldownTimer = Time.time + 1f;
              BloodFX.Play();
+             gameObject.tag = "Untagged";
              
              yield return new WaitForSeconds(1f);
              isDamaged = false;
+             gameObject.tag = "Enemy";
 
              if (enemyHealth <= 0)
              {

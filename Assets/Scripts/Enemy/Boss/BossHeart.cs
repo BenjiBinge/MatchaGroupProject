@@ -14,12 +14,17 @@ public class BossHeart : MonoBehaviour
     public bool isDamaged;
     private Animator _animator;
     
+    private BossBattle _bossBattle;
+    public GameObject fleshWall;
+    public float vulnerablTime = 8f;
+    
     private PlayerController _player;
 
     private void Start()
     {
         _animator = GetComponent<Animator>();
         _player = FindFirstObjectByType<PlayerController>();
+        _bossBattle = FindFirstObjectByType<BossBattle>();
 
     }
 
@@ -29,6 +34,17 @@ public class BossHeart : MonoBehaviour
         {
             _animator.Play("HeartPulse");
         }
+
+        /*if (fleshWall == null && vulnerablTime > 0)
+        {
+            vulnerablTime -= 1 * Time.deltaTime;
+        }
+
+        if (fleshWall == null && vulnerablTime <= 0)
+        {
+            _bossBattle.fleshWall.SetActive(true);
+            vulnerablTime = 8f;
+        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D other)

@@ -6,7 +6,7 @@ public class EnemySpawnControl : MonoBehaviour
     //Array of spawn points and enemies (total 3)
     public GameObject[] spawners;
     public GameObject[] enemies;
-    private float spawnCooldown = 1f;
+    private float spawnCooldown = 5f;
     public float spawnRadius = 10f;
     private Transform _target;
 
@@ -42,7 +42,7 @@ public class EnemySpawnControl : MonoBehaviour
         
         Instantiate(enemies[randomEnemy], spawners[randomSpawner].transform.position, Quaternion.identity);
         
-        spawnCooldown = Time.time + spawnCooldown;
+        spawnCooldown = Time.time + 5;
         yield return new WaitForSeconds(1f);
     }
 }

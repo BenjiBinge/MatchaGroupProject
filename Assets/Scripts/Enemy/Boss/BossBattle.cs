@@ -9,9 +9,9 @@ public class BossBattle : MonoBehaviour
     //Arrays for spawners and enemy types
     public GameObject[] spawners;
     public GameObject[] enemies;
-    public GameObject[] bulletSpawners;
+    //public GameObject[] bulletSpawners;
     private BossHeart _bossHeart;
-    public GameObject bullet;
+    //public GameObject bullet;
     public List<GameObject> enemiesList;
 
     public bool bulletExist;
@@ -31,8 +31,8 @@ public class BossBattle : MonoBehaviour
     public bool Phase2Active;
 
     //Max and current amount of enemies
-    public float activeEnemies;
-    public float maxEnemies;
+    //public float activeEnemies;
+    //public float maxEnemies;
     
     private FollowEnemy _follow;
     private RangeEnemy  _range;
@@ -49,12 +49,14 @@ public class BossBattle : MonoBehaviour
     private void Start()
     {
         _animator = GetComponent<Animator>();
-        _bossHeart = GetComponentInChildren<BossHeart>();
+        _bossHeart = FindFirstObjectByType<BossHeart>();
         _player = FindFirstObjectByType<PlayerController>();
 
         _follow = FindFirstObjectByType<FollowEnemy>();
         _range = FindFirstObjectByType<RangeEnemy>();
         _charge = FindFirstObjectByType<ChargeEnemy>();
+        
+        Phase1Active = true;
 
         /*_follow.chaseRange = 50f;
         _follow.enemyHealth = 1f;
@@ -69,17 +71,6 @@ public class BossBattle : MonoBehaviour
 
     private void Update()
     {
-        //Checks if the boss' health is more or less than its halfway point
-        if (_bossHeart.currentBossHealth > (_bossHeart.maxBossHealth / 2))
-        {
-            Phase1Active = true;
-            Phase2Active = false;
-        }
-        if (_bossHeart.currentBossHealth < (_bossHeart.maxBossHealth / 2))
-        {
-            Phase2Active = true;
-            Phase1Active = false;
-        }
         
         //Activates either phase 1 or 2
         if (Phase1Active)
@@ -87,10 +78,10 @@ public class BossBattle : MonoBehaviour
             Phase1();
         }
 
-        if (Phase2Active)
+        /*if (Phase2Active)
         {
             Phase2();
-        }
+        }*/
 
         if (Time.time > _healCooldown && _player.playerHealth < 3)
         {
@@ -102,7 +93,6 @@ public class BossBattle : MonoBehaviour
         {
             Destroy(fleshWall);
             Phase1Active =  false;
-            Phase2Active = false;
         }
         
     }
@@ -118,7 +108,7 @@ public class BossBattle : MonoBehaviour
         
             Instantiate(enemies[randomEnemy], spawners[randomSpawner].transform.position, Quaternion.identity);
         
-            spawnCooldown = Time.time + 3f;
+            spawnCooldown = Time.time + 5f;
             
         }
 
@@ -130,7 +120,7 @@ public class BossBattle : MonoBehaviour
     }
 
     //Phase 2
-    private void Phase2()
+    /*private void Phase2()
     {
 
         if (Time.time > spawnCooldown)
@@ -141,13 +131,11 @@ public class BossBattle : MonoBehaviour
         
             Instantiate(enemies[randomEnemy], spawners[randomSpawner].transform.position, Quaternion.identity);
         
-            spawnCooldown = Time.time + spawnCooldown;
-            //activeEnemies++;
-            //enemiesList.Add(clone);
+            spawnCooldown = Time.time + 4f;
             
         }
         
-        if (Time.time > bulletCooldown)
+        /*if (Time.time > bulletCooldown)
         {
             StartCoroutine(Shoot());
         }
@@ -156,26 +144,26 @@ public class BossBattle : MonoBehaviour
         {
             StartCoroutine(Vulnerable());
         }
-    }
+    }*/
     
 
     private IEnumerator Vulnerable()
     {
+        _animator.Play("FleshWallOpen");
         
-        fleshWall.SetActive(false);
-
-        if (_bossHeart.currentBossHealth <= 0)
-        {
-            yield return new WaitForSeconds(100f);
-        }
+        yield return new WaitForSeconds(1f);
+        //fleshWall.SetActive(false);
         
-        yield return new WaitForSeconds(vulnerableTime);
-        fleshWall.SetActive(true);
-        vulnerableCooldown = Time.time + vulnerableTime;
+        
+        yield return new WaitForSeconds(0.5f);
+        
+        _animator.Play("FleshWallClose");
+        vulnerableCooldown = Time.time + 20f;
+        
     }
 
 
-    private IEnumerator Shoot()
+    /*private IEnumerator Shoot()
     {
         bulletExist = true;
         bulletCooldown = Time.time + bulletCooldown;
@@ -189,7 +177,7 @@ public class BossBattle : MonoBehaviour
         yield return new WaitForSeconds(2f);
         bulletExist = false;
         
-    }
+    }*/
 
     
 

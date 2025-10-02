@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4623413973346300803}
   - component: {fileID: 5771413769914454119}
   - component: {fileID: 6556191743284939600}
+  - component: {fileID: 1566991917631278869}
   m_Layer: 0
   m_Name: FleshWall
   m_TagString: Untagged
@@ -165,3 +166,37 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 6.265958, y: 6.4535675}
   m_EdgeRadius: 0
+--- !u!114 &1566991917631278869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6318068459532187733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e8fd188525985540b0109d8bb958894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossBattle
+  spawners:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  enemies:
+  - {fileID: 2675060833902117878, guid: 92dab8157facfcf4b9f006a7f4dea186, type: 3}
+  - {fileID: 2675060833902117878, guid: 92dab8157facfcf4b9f006a7f4dea186, type: 3}
+  - {fileID: 742612453470649075, guid: 270c087e9377c6247a4edaa04b432e7a, type: 3}
+  - {fileID: 5009952159107444103, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
+  enemiesList: []
+  bulletExist: 0
+  spawnCooldown: 5
+  vulnerableCooldown: 20
+  vulnerableTime: 10
+  bulletCooldown: 0
+  fleshWall: {fileID: 0}
+  heart: {fileID: 0}
+  Phase1Active: 0
+  Phase2Active: 0
+  HealItem: {fileID: 0}
+  healSpawn: {fileID: 0}
