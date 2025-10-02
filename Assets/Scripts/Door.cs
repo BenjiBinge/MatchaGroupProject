@@ -1,9 +1,13 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
    private LeverManager  _leverManager;
+   public Sprite notOpened;
+   public Sprite Opened;
+   public SpriteRenderer doorSprite;
 
    
    private void Start()
@@ -17,6 +21,18 @@ public class Door : MonoBehaviour
       if (other.gameObject.CompareTag("Player") && _leverManager.isFlipped)
       {
          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+      }
+   }
+
+   private void Update()
+   {
+      if (!_leverManager.isFlipped)
+      {
+         doorSprite.sprite = notOpened;
+      }
+      else if (_leverManager.isFlipped)
+      {
+         doorSprite.sprite = Opened;
       }
    }
 }
