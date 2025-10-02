@@ -7,7 +7,7 @@ public class EnemySpawnControl : MonoBehaviour
     public GameObject[] spawners;
     public GameObject[] enemies;
     private float spawnCooldown = 1f;
-    private float spawnRadius = 10f;
+    public float spawnRadius = 10f;
     private Transform _target;
 
     private void Start()

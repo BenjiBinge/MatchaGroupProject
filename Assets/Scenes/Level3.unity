@@ -6541,63 +6541,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1001 &2090277509
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1474570126024243159, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -18.021767
-      objectReference: {fileID: 0}
-    - target: {fileID: 1474570126024243159, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -7.1145205
-      objectReference: {fileID: 0}
-    - target: {fileID: 1474570126024243159, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1474570126024243159, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1474570126024243159, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1474570126024243159, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1474570126024243159, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1474570126024243159, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1474570126024243159, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1474570126024243159, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5009952159107444103, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
-      propertyPath: m_Name
-      value: ChargeEnemy
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
 --- !u!1 &2107637851
 GameObject:
   m_ObjectHideFlags: 0
@@ -6848,4 +6791,3 @@ SceneRoots:
   - {fileID: 581108330}
   - {fileID: 1335143180}
   - {fileID: 711503324}
-  - {fileID: 2090277509}

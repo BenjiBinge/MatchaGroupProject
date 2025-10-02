@@ -163,8 +163,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: 0.13226628, y: -0.31014156}
+  m_Radius: 0.72804534
 --- !u!50 &3882986871038529691
 Rigidbody2D:
   serializedVersion: 5
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b475cef8b28694bb503b2f6ca53fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChargeEnemy
-  enemyHealth: 2
+  enemyHealth: 1
   LineOfSight: {fileID: 6622210697836625342}
   moveSpeed: 2
   direction: {x: 0, y: 0}

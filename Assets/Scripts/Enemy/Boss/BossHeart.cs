@@ -25,7 +25,7 @@ public class BossHeart : MonoBehaviour
 
     private void Update()
     {
-        if (isDamaged == false)
+        if (!isDamaged)
         {
             _animator.Play("HeartPulse");
         }

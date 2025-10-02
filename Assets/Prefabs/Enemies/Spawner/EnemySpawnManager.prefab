@@ -46,3 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnControl
   spawners: []
   enemies: []
+  spawnRadius: 15
