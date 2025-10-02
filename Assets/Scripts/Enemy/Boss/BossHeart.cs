@@ -132,9 +132,9 @@ public class BossHeart : MonoBehaviour
         {
 
             SceneManager.LoadScene("CutsceneEndBad");
-            yield return new WaitForSeconds(10f);
-
-            SceneManager.LoadScene("CutsceneEndGood");
         }
+        yield return new WaitForSeconds(10f);
+
+        SceneManager.LoadScene("CutsceneEndGood");
     }
 }

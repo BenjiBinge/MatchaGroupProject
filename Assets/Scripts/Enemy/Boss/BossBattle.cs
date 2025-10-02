@@ -106,6 +106,14 @@ public class BossBattle : MonoBehaviour
         {
             Destroy(fleshWall);
             Phase1Active =  false;
+            Phase2Active = false;
+        }
+
+        if (_bossHeart.isDead)
+        {
+            Destroy(fleshWall);
+            Phase1Active =  false;
+            Phase2Active =  false;
         }
         
     }
