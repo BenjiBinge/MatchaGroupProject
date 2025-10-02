@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using System.Collections;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class BossHeart : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class BossHeart : MonoBehaviour
     public float currentBossHealth;
     public float maxBossHealth = 30f;
     public bool isDead;
-    public TextMeshPro isDeadText;
+    public TMP_Text isDeadText;
     
     public AudioSource heartSound;
     public AudioSource dmgSound;
@@ -21,7 +22,6 @@ public class BossHeart : MonoBehaviour
     private Animator _animator;
     
     private BossBattle _bossBattle;
-    public GameObject fleshWall;
     public float vulnerablTime = 8f;
     
     private PlayerController _player;
@@ -130,11 +130,11 @@ public class BossHeart : MonoBehaviour
     {
         if (isDamaged && isDead)
         {
-            //Play bad end cutscene
+
+            SceneManager.LoadScene("CutsceneEndBad");
+            yield return new WaitForSeconds(10f);
+
+            SceneManager.LoadScene("CutsceneEndGood");
         }
-        yield return new WaitForSeconds(5f);
-        
-        //Play good end cutscene
     }
-    
 }
