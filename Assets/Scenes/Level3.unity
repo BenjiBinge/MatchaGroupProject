@@ -1535,6 +1535,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6956638650859561587, guid: f1cdeb48d051fe84c840231514b2a491, type: 3}
+      propertyPath: full
+      value: 
+      objectReference: {fileID: 3997212966637299867, guid: 66733ce29fec0424a8d670f17c729aed, type: 3}
+    - target: {fileID: 6956638650859561587, guid: f1cdeb48d051fe84c840231514b2a491, type: 3}
+      propertyPath: empty
+      value: 
+      objectReference: {fileID: 45088081, guid: 66733ce29fec0424a8d670f17c729aed, type: 3}
+    - target: {fileID: 6956638650859561587, guid: f1cdeb48d051fe84c840231514b2a491, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 211314417}
