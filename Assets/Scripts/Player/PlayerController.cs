@@ -281,6 +281,11 @@ public class PlayerController : MonoBehaviour
          {
             DeathScreen();
          }
+
+         if (playerHealth <= 0 && SceneManager.GetActiveScene().buildIndex == 5)
+         {
+            RestartScene();
+         }
       }
       if (Time.time > _damageCooldownTimer && moveDirection == -1 || moveDirection == -3)
       {

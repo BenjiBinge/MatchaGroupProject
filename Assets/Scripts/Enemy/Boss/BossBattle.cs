@@ -74,15 +74,27 @@ public class BossBattle : MonoBehaviour
     {
         
         //Activates either phase 1 or 2
+        if (_bossHeart.currentBossHealth > _bossHeart.maxBossHealth / 2)
+        {
+            Phase1Active = true;
+            Phase2Active = false;
+        }
+
+        if (_bossHeart.currentBossHealth < _bossHeart.maxBossHealth / 2)
+        {
+            Phase1Active = false;
+            Phase2Active = true;
+        }
+        
+        
         if (Phase1Active)
         {
             Phase1();
         }
-
-        /*if (Phase2Active)
+        if (Phase2Active)
         {
             Phase2();
-        }*/
+        }
 
         if (Time.time > _healCooldown && _player.playerHealth < 3)
         {
@@ -121,7 +133,7 @@ public class BossBattle : MonoBehaviour
     }
 
     //Phase 2
-    /*private void Phase2()
+    private void Phase2()
     {
 
         if (Time.time > spawnCooldown)
@@ -132,20 +144,20 @@ public class BossBattle : MonoBehaviour
         
             Instantiate(enemies[randomEnemy], spawners[randomSpawner].transform.position, Quaternion.identity);
         
-            spawnCooldown = Time.time + 4f;
+            spawnCooldown = Time.time + 3f;
             
         }
         
         /*if (Time.time > bulletCooldown)
         {
             StartCoroutine(Shoot());
-        }
+        }*/
         
         if (Time.time > vulnerableCooldown)
         {
             StartCoroutine(Vulnerable());
         }
-    }*/
+    }
     
 
     private IEnumerator Vulnerable()
@@ -156,7 +168,7 @@ public class BossBattle : MonoBehaviour
         fleshWall.SetActive(false);
         
         
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(8f);
         
         fleshAnimator.Play("FleshWallClose");
         fleshWall.SetActive(true);
