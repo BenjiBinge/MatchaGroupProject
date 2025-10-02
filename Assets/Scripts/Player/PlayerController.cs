@@ -38,6 +38,13 @@ public class PlayerController : MonoBehaviour
 
    //Checks if the player is moving
    public bool isMoving;
+
+   //Audio Sources
+   public AudioSource attackSound;
+   public AudioSource chargeSound;
+   public AudioSource damageSound;
+   public AudioSource moveSound;
+   public AudioSource healSound;
    
    
    private SpriteRenderer _spriteRenderer;
@@ -78,10 +85,12 @@ public class PlayerController : MonoBehaviour
       {
          moveDirection = _input.Horizontal + 2f;
          
+         
       }
       if (_input.Vertical != 0 && !isAttacking && !isChargeAttacking)
       {
          moveDirection = _input.Vertical - 2f;
+         
         
       }
       
@@ -183,6 +192,8 @@ public class PlayerController : MonoBehaviour
          _canAttack = false;
          _invincible = true;
          AttackHitboxHorizontal.SetActive(true);
+
+         attackSound.Play();
          
          yield return new WaitForSeconds(0.5f);
          
@@ -197,6 +208,8 @@ public class PlayerController : MonoBehaviour
          _canAttack = false;
          _invincible = true;
          AttackHitboxVertical.SetActive(true);
+         
+         attackSound.Play();
          
          yield return new WaitForSeconds(0.5f);
          
@@ -221,6 +234,8 @@ public class PlayerController : MonoBehaviour
          _canAttack = false;
          AttackHitboxHorizontal.SetActive(true);
          
+         chargeSound.Play();
+         
          yield return new WaitForSeconds(0.5f);
          AttackHitboxHorizontal.SetActive(false);
          _canAttack = true;
@@ -234,6 +249,8 @@ public class PlayerController : MonoBehaviour
          _rigidbody.linearVelocityY += (moveDirection + 2) * chargeSpeed;
          _canAttack = false;
          AttackHitboxVertical.SetActive(true);
+         
+         chargeSound.Play();
          
          yield return new WaitForSeconds(0.5f);
          AttackHitboxVertical.SetActive(false);
@@ -273,6 +290,9 @@ public class PlayerController : MonoBehaviour
          playerHealth -= 1;
          _damageCooldownTimer = Time.time + damageCooldown;
          //_rigidbody.linearVelocityX -= (moveDirection - 2f) + moveSpeed * 2f;
+         damageSound.Play();
+         
+         
          
          yield return new WaitForSeconds(0.2f);
          isKnockbacked = false;
@@ -293,6 +313,7 @@ public class PlayerController : MonoBehaviour
          playerHealth -= 1;
          _damageCooldownTimer = Time.time + damageCooldown;
          //_rigidbody.linearVelocityY -= (moveDirection + 2f) + moveSpeed * 2f;
+         damageSound.Play();
          
          yield return new WaitForSeconds(0.2f);
          isKnockbacked = false;
@@ -311,6 +332,7 @@ public class PlayerController : MonoBehaviour
       {
          playerHealth++;
          Destroy(other.gameObject);
+         healSound.Play();
       }
       
       
