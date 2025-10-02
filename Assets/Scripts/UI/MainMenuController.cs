@@ -11,7 +11,7 @@ public class MainMenuController : MonoBehaviour
     
     public void StartGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("CutsceneStart");
     }
 
     public void Skip1()
