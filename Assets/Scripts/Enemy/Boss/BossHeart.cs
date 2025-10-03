@@ -10,7 +10,7 @@ public class BossHeart : MonoBehaviour
     public float currentBossHealth;
     public float maxBossHealth = 30f;
     public bool isDead;
-    public TMP_Text isDeadText;
+    public Canvas EndingCanvas;
     
     public AudioSource heartSound;
     public AudioSource dmgSound;
@@ -32,6 +32,7 @@ public class BossHeart : MonoBehaviour
         _animator = GetComponent<Animator>();
         _player = FindFirstObjectByType<PlayerController>();
         _bossBattle = FindFirstObjectByType<BossBattle>();
+        EndingCanvas.enabled = false;
 
     }
 
@@ -45,7 +46,7 @@ public class BossHeart : MonoBehaviour
 
         if (isDead)
         {
-            isDeadText.text = "Destroy The Heart?";
+            EndingCanvas.enabled = true;
             StartCoroutine(Ending());
 
         }

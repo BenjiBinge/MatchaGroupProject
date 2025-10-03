@@ -122,8 +122,8 @@ MonoBehaviour:
   - {fileID: 5152032034778473996}
   - {fileID: 4313443957219742481}
   - {fileID: 5985576558048438527}
-  empty: {fileID: -2994755666476235508, guid: 195206139e99a6b42a45e815e04cb8ba, type: 3}
-  full: {fileID: -6217331823932151610, guid: 195206139e99a6b42a45e815e04cb8ba, type: 3}
+  empty: {fileID: 45088081, guid: 66733ce29fec0424a8d670f17c729aed, type: 3}
+  full: {fileID: 3997212966637299867, guid: 66733ce29fec0424a8d670f17c729aed, type: 3}
 --- !u!1001 &3000814568477457671
 PrefabInstance:
   m_ObjectHideFlags: 0

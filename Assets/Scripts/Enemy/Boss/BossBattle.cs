@@ -129,7 +129,7 @@ public class BossBattle : MonoBehaviour
         
             Instantiate(enemies[randomEnemy], spawners[randomSpawner].transform.position, Quaternion.identity);
         
-            spawnCooldown = Time.time + 9f;
+            spawnCooldown = Time.time + 7f;
             
         }
 
@@ -152,7 +152,7 @@ public class BossBattle : MonoBehaviour
         
             Instantiate(enemies[randomEnemy], spawners[randomSpawner].transform.position, Quaternion.identity);
         
-            spawnCooldown = Time.time + 9f;
+            spawnCooldown = Time.time + 6f;
             
         }
         

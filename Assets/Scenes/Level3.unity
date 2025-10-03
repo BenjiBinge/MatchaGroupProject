@@ -1517,6 +1517,10 @@ PrefabInstance:
       propertyPath: isDeadText
       value: 
       objectReference: {fileID: 1792867688}
+    - target: {fileID: 8728571863250253930, guid: 2ded6b40d19905c438f3112751557c0f, type: 3}
+      propertyPath: EndingCanvas
+      value: 
+      objectReference: {fileID: 1653726873}
     m_RemovedComponents:
     - {fileID: 2645341351468204836, guid: 2ded6b40d19905c438f3112751557c0f, type: 3}
     - {fileID: 5528391577818297632, guid: 2ded6b40d19905c438f3112751557c0f, type: 3}
@@ -1740,14 +1744,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6956638650859561587, guid: f1cdeb48d051fe84c840231514b2a491, type: 3}
-      propertyPath: full
-      value: 
-      objectReference: {fileID: 3997212966637299867, guid: 66733ce29fec0424a8d670f17c729aed, type: 3}
-    - target: {fileID: 6956638650859561587, guid: f1cdeb48d051fe84c840231514b2a491, type: 3}
-      propertyPath: empty
-      value: 
-      objectReference: {fileID: 45088081, guid: 66733ce29fec0424a8d670f17c729aed, type: 3}
     - target: {fileID: 6956638650859561587, guid: f1cdeb48d051fe84c840231514b2a491, type: 3}
       propertyPath: target
       value: 
@@ -5019,7 +5015,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 0f346fa969fb0e74d88eed571ce4bb34, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5348,7 +5344,7 @@ GameObject:
   - component: {fileID: 1653726872}
   - component: {fileID: 1653726871}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: EndingCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5720,7 +5716,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Destroy The Heart?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cbd2f79b18859c542a326fda51554928, type: 2}
   m_sharedMaterial: {fileID: -5329682449193315876, guid: cbd2f79b18859c542a326fda51554928, type: 2}
@@ -7520,7 +7516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8372103783844204952, guid: fabce858dc9b8794e9c0705ba5b7075c, type: 3}
       propertyPath: orthographic size
-      value: 15.40625
+      value: 8.4375
       objectReference: {fileID: 0}
     - target: {fileID: 8372103783844204952, guid: fabce858dc9b8794e9c0705ba5b7075c, type: 3}
       propertyPath: m_BackGroundColor.b
