@@ -4,7 +4,7 @@ public class Bullet : MonoBehaviour
 {
    public float moveSpeed;
    private Rigidbody2D _rigidbody;
-   private float _despawnTimer = 5f;
+   private float _despawnTimer = 4.5f;
    
 
    private void Start()
@@ -27,6 +27,11 @@ public class Bullet : MonoBehaviour
    private void OnCollisionEnter2D(Collision2D other)
    {
       if (other.gameObject.CompareTag("Death"))
+      {
+         Destroy(gameObject);
+      }
+
+      if (other.gameObject.CompareTag("Enemy"))
       {
          Destroy(gameObject);
       }
