@@ -96,7 +96,7 @@ public class BossBattle : MonoBehaviour
             Phase2();
         }
 
-        if (Time.time > _healCooldown && _player.playerHealth < 3)
+        if (Time.time > _healCooldown && _player.playerHealth < 2)
         {
             Instantiate(HealItem, healSpawn.position, Quaternion.identity);
             _healCooldown = Time.time + 10f;
@@ -129,7 +129,7 @@ public class BossBattle : MonoBehaviour
         
             Instantiate(enemies[randomEnemy], spawners[randomSpawner].transform.position, Quaternion.identity);
         
-            spawnCooldown = Time.time + 7f;
+            spawnCooldown = Time.time + 5f;
             
         }
 
@@ -152,7 +152,7 @@ public class BossBattle : MonoBehaviour
         
             Instantiate(enemies[randomEnemy], spawners[randomSpawner].transform.position, Quaternion.identity);
         
-            spawnCooldown = Time.time + 6f;
+            spawnCooldown = Time.time + 4f;
             
         }
         
@@ -161,7 +161,7 @@ public class BossBattle : MonoBehaviour
             StartCoroutine(Shoot());
         }*/
         
-        if (Time.time > vulnerableCooldown)
+        if (Time.time > vulnerableCooldown && !_bossHeart.isDead)
         {
             StartCoroutine(Vulnerable());
         }

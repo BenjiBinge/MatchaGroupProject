@@ -88,17 +88,17 @@ public class BossHeart : MonoBehaviour
             yield return new WaitForSeconds(1f);
             isDamaged = false;
             
-            //Destroys enemy on death
-            if (currentBossHealth <= 0)
+            //ISDead
+            if (currentBossHealth <= 1)
             {
-                StartCoroutine(Death());
+                isDead = true;
             }
         }
     }
 
     private IEnumerator Death()
     {
-        BloodFX.Play();
+        /*BloodFX.Play();
         dmgSound.Play();
         _animator.Play("HeartDamaged");
         yield return new WaitForSeconds(2f);
@@ -121,7 +121,7 @@ public class BossHeart : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         BloodFX.Play();
         dmgSound.Play();
-        _animator.Play("HeartDamaged");
+        _animator.Play("HeartDamaged");*/
         
         yield return new WaitForSeconds(1f);
         isDead = true;

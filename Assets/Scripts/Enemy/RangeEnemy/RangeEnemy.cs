@@ -176,7 +176,7 @@ public class RangeEnemy : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             canShoot = false;
-            _shootCooldown = 2f;
+            _shootCooldown = 1f;
         }
     }
 

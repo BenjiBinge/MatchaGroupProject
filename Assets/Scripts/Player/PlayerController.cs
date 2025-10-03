@@ -302,7 +302,7 @@ public class PlayerController : MonoBehaviour
             DeathScreen();
          }
 
-         if (playerHealth <= 0 && SceneManager.GetActiveScene().buildIndex == 5)
+         if (playerHealth <= 0 && SceneManager.GetActiveScene().buildIndex == 6)
          {
             RestartScene();
          }
