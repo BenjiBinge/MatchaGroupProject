@@ -211,7 +211,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: -2200956236621553909, guid: 5959372252a62ee41a4aaac7b6bff7ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -299,4 +299,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   moveSpeed: 5
-  bulletSound: {fileID: 6411482609897540996}
