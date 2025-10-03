@@ -31,7 +31,15 @@ public class DialogueScript: MonoBehaviour
             currentLine++;
             isFinished = false;
         }
-        else if (currentLine == lines.Length && isFinished)
+        else if(currentLine == lines.Length && isFinished && SceneManager.GetActiveScene().name == "CutsceneEndGood")
+        {
+            SceneManager.LoadScene("MainMenu");
+        } 
+        else if(currentLine == lines.Length && isFinished && SceneManager.GetActiveScene().name == "CutsceneEndBad")
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+        else if (currentLine == lines.Length && isFinished && (SceneManager.GetActiveScene().name != "CutsceneEndBad" || SceneManager.GetActiveScene().name != "CutsceneEndGood"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
