@@ -145,7 +145,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539884097}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
 --- !u!114 &539884099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,8 +464,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135856128}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.530683, y: 1.530683, z: 1.530683}
+  m_LocalPosition: {x: 0, y: 0, z: -3391.999}
+  m_LocalScale: {x: 1.5306829, y: 1.5306829, z: 1.5306829}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1636132011}
@@ -473,9 +473,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 287.59137, y: -141.92842}
+  m_AnchoredPosition: {x: 88, y: -45}
   m_SizeDelta: {x: 82.02, y: 17.91}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.50000006, y: 1}
 --- !u!114 &1135856130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,7 +581,7 @@ GameObject:
   - component: {fileID: 1145601654}
   - component: {fileID: 1145601653}
   - component: {fileID: 1145601655}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CutscenePlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -987,7 +987,7 @@ Canvas:
   m_GameObject: {fileID: 1996634779}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 615467428}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1039,6 +1039,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 615467429}
   - {fileID: 1414023597}
-  - {fileID: 1996634783}
   - {fileID: 1028364928}
+  - {fileID: 1996634783}
   - {fileID: 539884101}
