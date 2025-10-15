@@ -13,4 +13,19 @@ public class DeathScreen : MonoBehaviour
     {
         SceneManager.LoadScene("Level1");
     }
+
+    public void RetryLevel3()
+    {
+        SceneManager.LoadScene("Level3");
+    }
+
+    public void GoodEnding()
+    {
+        SceneManager.LoadScene("CutsceneEndGood");
+    }
+
+    public void BadEnding()
+    {
+        SceneManager.LoadScene("CutsceneEndBad");
+    }
 }
