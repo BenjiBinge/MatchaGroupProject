@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class BossBattle : MonoBehaviour
 {
@@ -111,9 +112,7 @@ public class BossBattle : MonoBehaviour
 
         if (_bossHeart.isDead)
         {
-            Destroy(fleshWall);
-            Phase1Active =  false;
-            Phase2Active =  false;
+            SceneManager.LoadScene("ChooseEnding");
         }
         
     }
@@ -129,7 +128,7 @@ public class BossBattle : MonoBehaviour
         
             Instantiate(enemies[randomEnemy], spawners[randomSpawner].transform.position, Quaternion.identity);
         
-            spawnCooldown = Time.time + 5f;
+            spawnCooldown = Time.time + 6f;
             
         }
 
@@ -152,7 +151,7 @@ public class BossBattle : MonoBehaviour
         
             Instantiate(enemies[randomEnemy], spawners[randomSpawner].transform.position, Quaternion.identity);
         
-            spawnCooldown = Time.time + 4f;
+            spawnCooldown = Time.time + 6f;
             
         }
         

@@ -44,12 +44,12 @@ public class BossHeart : MonoBehaviour
             
         }
 
-        if (isDead)
+        /*if (isDead)
         {
             EndingCanvas.enabled = true;
             StartCoroutine(Ending());
 
-        }
+        }*/
         
         
     }
@@ -127,7 +127,7 @@ public class BossHeart : MonoBehaviour
         isDead = true;
     }
 
-    private IEnumerator Ending()
+    /*private IEnumerator Ending()
     {
         if (isDamaged && isDead)
         {
@@ -137,5 +137,5 @@ public class BossHeart : MonoBehaviour
         yield return new WaitForSeconds(10f);
 
         SceneManager.LoadScene("CutsceneEndGood");
-    }
+    }*/
 }

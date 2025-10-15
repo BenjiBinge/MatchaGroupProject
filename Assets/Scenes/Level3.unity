@@ -1530,8 +1530,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1653726873}
     - target: {fileID: 8728571863250253930, guid: 2ded6b40d19905c438f3112751557c0f, type: 3}
+      propertyPath: maxBossHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8728571863250253930, guid: 2ded6b40d19905c438f3112751557c0f, type: 3}
       propertyPath: currentBossHealth
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2645341351468204836, guid: 2ded6b40d19905c438f3112751557c0f, type: 3}
