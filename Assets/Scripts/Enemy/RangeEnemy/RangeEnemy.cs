@@ -41,6 +41,8 @@ public class RangeEnemy : MonoBehaviour
     private Collider2D[] _colliders;
 
     private RangeEnemyAnimation _animation;
+
+    public EnemySpawnControl _spawn;
     
     private void Start()
     {
@@ -216,6 +218,11 @@ public class RangeEnemy : MonoBehaviour
             }
         }
         
+    }
+    
+    private void OnDestroy()
+    {
+        _spawn.enemiesList.Remove(gameObject);
     }
 
     

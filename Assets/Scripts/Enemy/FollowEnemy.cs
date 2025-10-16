@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -30,6 +31,7 @@ public class FollowEnemy : MonoBehaviour
     
     private FollowAnimationScript _animation;
 
+    public EnemySpawnControl _spawn;
     
     private void Start()
     {
@@ -117,10 +119,13 @@ public class FollowEnemy : MonoBehaviour
         }
         
     }
-    
-    
-    
-    
+
+    private void OnDestroy()
+    {
+        _spawn.enemiesList.Remove(gameObject);
+    }
+
+
     //Takes damage
     private IEnumerator TakeDamage()
     {

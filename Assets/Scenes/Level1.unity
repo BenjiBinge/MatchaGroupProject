@@ -16055,6 +16055,10 @@ PrefabInstance:
       value: EnemySpawnManager
       objectReference: {fileID: 0}
     - target: {fileID: 2012972683293525731, guid: 6f213eee2e7a4b74c8a945ec4b35cf8e, type: 3}
+      propertyPath: maxSpawnCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012972683293525731, guid: 6f213eee2e7a4b74c8a945ec4b35cf8e, type: 3}
       propertyPath: enemies.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -16861,6 +16865,10 @@ PrefabInstance:
       value: EnemySpawnManager
       objectReference: {fileID: 0}
     - target: {fileID: 2012972683293525731, guid: 6f213eee2e7a4b74c8a945ec4b35cf8e, type: 3}
+      propertyPath: maxSpawnCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012972683293525731, guid: 6f213eee2e7a4b74c8a945ec4b35cf8e, type: 3}
       propertyPath: enemies.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -16870,6 +16878,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2012972683293525731, guid: 6f213eee2e7a4b74c8a945ec4b35cf8e, type: 3}
       propertyPath: 'enemies.Array.data[0]'
+      value: 
+      objectReference: {fileID: 742612453470649075, guid: 270c087e9377c6247a4edaa04b432e7a, type: 3}
+    - target: {fileID: 2012972683293525731, guid: 6f213eee2e7a4b74c8a945ec4b35cf8e, type: 3}
+      propertyPath: 'enemies.Array.data[1]'
       value: 
       objectReference: {fileID: 742612453470649075, guid: 270c087e9377c6247a4edaa04b432e7a, type: 3}
     - target: {fileID: 2012972683293525731, guid: 6f213eee2e7a4b74c8a945ec4b35cf8e, type: 3}
@@ -33469,6 +33481,10 @@ PrefabInstance:
     - target: {fileID: 1562893547185806933, guid: 6f213eee2e7a4b74c8a945ec4b35cf8e, type: 3}
       propertyPath: m_Name
       value: EnemySpawnManager (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012972683293525731, guid: 6f213eee2e7a4b74c8a945ec4b35cf8e, type: 3}
+      propertyPath: maxSpawnCount
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2012972683293525731, guid: 6f213eee2e7a4b74c8a945ec4b35cf8e, type: 3}
       propertyPath: enemies.Array.size

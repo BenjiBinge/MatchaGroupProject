@@ -32,7 +32,8 @@ public class ChargeEnemy : MonoBehaviour
     private float _damageCooldownTimer = 1f;
     public bool isDamaged;
     public ParticleSystem BloodFX;
-    
+
+    public EnemySpawnControl _spawn;
     
     //Chase
     public bool canChase;
@@ -216,5 +217,10 @@ public class ChargeEnemy : MonoBehaviour
      {
          Gizmos.color = Color.yellow;
          Gizmos.DrawWireSphere(transform.position, chaseRange);
+     }
+     
+     private void OnDestroy()
+     {
+         _spawn.enemiesList.Remove(gameObject);
      }
 }

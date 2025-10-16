@@ -43,15 +43,6 @@ public class BossHeart : MonoBehaviour
             _animator.Play("HeartPulse");
             
         }
-
-        if (isDead)
-        {
-            EndingCanvas.enabled = true;
-            StartCoroutine(Ending());
-
-        }
-        
-        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -89,7 +80,7 @@ public class BossHeart : MonoBehaviour
             isDamaged = false;
             
             //ISDead
-            if (currentBossHealth <= 1)
+            if (currentBossHealth <= 0)
             {
                 isDead = true;
             }
@@ -98,44 +89,11 @@ public class BossHeart : MonoBehaviour
 
     private IEnumerator Death()
     {
-        /*BloodFX.Play();
-        dmgSound.Play();
-        _animator.Play("HeartDamaged");
-        yield return new WaitForSeconds(2f);
-        BloodFX.Play();
-        dmgSound.Play();
-        _animator.Play("HeartDamaged");
-        yield return new WaitForSeconds(2f);
-        BloodFX.Play();
-        dmgSound.Play();
-        _animator.Play("HeartDamaged");
-        
-        yield return new WaitForSeconds(1f);
-        BloodFX.Play();
-        dmgSound.Play();
-        _animator.Play("HeartDamaged");
-        yield return new WaitForSeconds(0.1f);
-        BloodFX.Play();
-        dmgSound.Play();
-        _animator.Play("HeartDamaged");
-        yield return new WaitForSeconds(0.1f);
-        BloodFX.Play();
-        dmgSound.Play();
-        _animator.Play("HeartDamaged");*/
+       
         
         yield return new WaitForSeconds(1f);
         isDead = true;
     }
 
-    private IEnumerator Ending()
-    {
-        if (isDamaged && isDead)
-        {
-
-            SceneManager.LoadScene("CutsceneEndBad");
-        }
-        yield return new WaitForSeconds(10f);
-
-        SceneManager.LoadScene("CutsceneEndGood");
-    }
+    
 }

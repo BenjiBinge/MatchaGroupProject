@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class BossBattle : MonoBehaviour
 {
@@ -13,14 +14,12 @@ public class BossBattle : MonoBehaviour
     private BossHeart _bossHeart;
     //public GameObject bullet;
     public List<GameObject> enemiesList;
-
-    public bool bulletExist;
+    
     
     //Timers
     public float spawnCooldown;
     public float vulnerableCooldown;
     public float vulnerableTime;
-    public float bulletCooldown;
 
     //Fleshwall and heart
     public GameObject fleshWall;
@@ -29,14 +28,7 @@ public class BossBattle : MonoBehaviour
     //Bools to control current phase
     public bool Phase1Active;
     public bool Phase2Active;
-
-    //Max and current amount of enemies
-    //public float activeEnemies;
-    //public float maxEnemies;
     
-    private FollowEnemy _follow;
-    private RangeEnemy  _range;
-    private ChargeEnemy  _charge;
     
     //HealItem related
     public GameObject HealItem;
@@ -52,22 +44,10 @@ public class BossBattle : MonoBehaviour
         _animator = GetComponent<Animator>();
         _bossHeart = FindFirstObjectByType<BossHeart>();
         _player = FindFirstObjectByType<PlayerController>();
-
-        _follow = FindFirstObjectByType<FollowEnemy>();
-        _range = FindFirstObjectByType<RangeEnemy>();
-        _charge = FindFirstObjectByType<ChargeEnemy>();
+        
         
         Phase1Active = true;
-
-        /*_follow.chaseRange = 50f;
-        _follow.enemyHealth = 1f;
         
-        _range.chaseRange = 50f;
-        _range.enemyHealth = 1f;
-        
-        _charge.chaseRange = 50f;
-        _charge.enemyHealth = 1f;*/
-
     }
 
     private void Update()
@@ -96,6 +76,7 @@ public class BossBattle : MonoBehaviour
             Phase2();
         }
 
+        
         if (Time.time > _healCooldown && _player.playerHealth < 2)
         {
             Instantiate(HealItem, healSpawn.position, Quaternion.identity);
@@ -111,9 +92,7 @@ public class BossBattle : MonoBehaviour
 
         if (_bossHeart.isDead)
         {
-            Destroy(fleshWall);
-            Phase1Active =  false;
-            Phase2Active =  false;
+            SceneManager.LoadScene("ChooseEnding");
         }
         
     }
@@ -129,7 +108,7 @@ public class BossBattle : MonoBehaviour
         
             Instantiate(enemies[randomEnemy], spawners[randomSpawner].transform.position, Quaternion.identity);
         
-            spawnCooldown = Time.time + 5f;
+            spawnCooldown = Time.time + 6f;
             
         }
 
@@ -152,14 +131,11 @@ public class BossBattle : MonoBehaviour
         
             Instantiate(enemies[randomEnemy], spawners[randomSpawner].transform.position, Quaternion.identity);
         
-            spawnCooldown = Time.time + 4f;
+            spawnCooldown = Time.time + 6f;
             
         }
         
-        /*if (Time.time > bulletCooldown)
-        {
-            StartCoroutine(Shoot());
-        }*/
+        
         
         if (Time.time > vulnerableCooldown && !_bossHeart.isDead)
         {
@@ -184,23 +160,9 @@ public class BossBattle : MonoBehaviour
         
     }
 
-
-    /*private IEnumerator Shoot()
-    {
-        bulletExist = true;
-        bulletCooldown = Time.time + bulletCooldown;
-        int randomBulletSpawner = Random.Range(0, bulletSpawners.Length);
-
-        var clone = Instantiate(bullet, bulletSpawners[randomBulletSpawner].transform.position, Quaternion.identity);
-        
-        clone.TryGetComponent(out Rigidbody2D _rigidbody2D);
-        _rigidbody2D.linearVelocityY -= 3f;
-        
-        yield return new WaitForSeconds(2f);
-        bulletExist = false;
-        
-    }*/
-
+    
+    
+   
     
 
 }
