@@ -218,6 +218,7 @@ MonoBehaviour:
   canDash: 0
   isDamaged: 0
   BloodFX: {fileID: 5833524890396341973}
+  _spawn: {fileID: 0}
   canChase: 1
   chaseRange: 50
   whatIsPlayer:
@@ -272,7 +273,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 53a35750b2934a54798665a489a99abe, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -401,7 +402,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 5fb552f948d02f74a9af89520b476e4b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.564
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0

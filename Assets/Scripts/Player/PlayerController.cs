@@ -304,7 +304,7 @@ public class PlayerController : MonoBehaviour
 
          if (playerHealth <= 0 && SceneManager.GetActiveScene().buildIndex == 6)
          {
-            RestartScene();
+            SceneManager.LoadScene("DeathScreenLevel3");
          }
       }
       if (Time.time > _damageCooldownTimer && moveDirection == -1 || moveDirection == -3)
