@@ -27,5 +27,6 @@ public class DeathScreen : MonoBehaviour
     public void BadEnding()
     {
         SceneManager.LoadScene("CutsceneEndBad");
+        SceneManager.LoadScene("CutsceneEndBad");
     }
 }

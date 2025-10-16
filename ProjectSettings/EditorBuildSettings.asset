@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level3.unity
     guid: 37141eb1a8e06b04b875503ba96e0bc0
   - enabled: 1
+    path: Assets/Scenes/ChooseEnding.unity
+    guid: 96451c84ac19e8744927cc472e00bc8e
+  - enabled: 1
     path: Assets/Scenes/CutsceneEndGood.unity
     guid: 0bd0dc363cc9d95488252acf45065d28
   - enabled: 1
