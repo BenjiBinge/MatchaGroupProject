@@ -2064,11 +2064,9 @@ MonoBehaviour:
   - {fileID: 742612453470649075, guid: 270c087e9377c6247a4edaa04b432e7a, type: 3}
   - {fileID: 5009952159107444103, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
   enemiesList: []
-  bulletExist: 0
   spawnCooldown: 5
   vulnerableCooldown: 20
   vulnerableTime: 15
-  bulletCooldown: 0
   fleshWall: {fileID: 2111127391}
   heart: {fileID: 0}
   Phase1Active: 0
@@ -5365,7 +5363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1653726871
 MonoBehaviour:
   m_ObjectHideFlags: 0
