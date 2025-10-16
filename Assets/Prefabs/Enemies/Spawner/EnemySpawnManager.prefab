@@ -44,6 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 403b53c901b378e4fa3060dff8e7f541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnControl
-  spawners: []
-  enemies: []
+  spawners:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  enemies:
+  - {fileID: 742612453470649075, guid: 270c087e9377c6247a4edaa04b432e7a, type: 3}
+  - {fileID: 2675060833902117878, guid: 92dab8157facfcf4b9f006a7f4dea186, type: 3}
+  - {fileID: 5009952159107444103, guid: 4e9cae835c22f7c498909a16c4247062, type: 3}
+  - {fileID: 2675060833902117878, guid: 92dab8157facfcf4b9f006a7f4dea186, type: 3}
+  maxSpawnCount: 3
   spawnRadius: 15
+  enemiesList: []
